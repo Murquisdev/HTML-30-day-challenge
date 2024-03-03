@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 1</h1>
+    <h2>Formas de añadir estilos CSS a una página web</h2>
+    <p>Hay 3 formas de añadir código css a una página HTML</p>
+    <ul>
+        <li>Estilos en línea</li>
+        <li>Directamente en la cabecera del documento HTML (bloque de estilos)</li>
+        <li>Desde un archivo externo</li>
+    </ul>
+    <h3>Estilos en línea</h3>
+    <p>Se añaden directamente dentro de las etiquetas HTML utilizando el <span class="bold">atributo</span> <span class="italic">style</span></p>
+    <code>
+        <p style="color:navy;">Este texto saldrá con color "navy""</p>
+    </code>
+    <h3>Bloque de estilos</h3>
+    <p>Se añaden las <span class="bold">etiquetas</span> <span class="italic">style</span></p>
+    <p>No es obligatorio, pero se suelen poner en la cabecera del documento HTML (head), ya que era la forma antigua de hacerlo</p>
+    <h3>Archivo externo</h3>
+    <p>Se añade el <span class="bold red">enlace</span> en la cabecera del archivo HTML aputando al archivo css</p>
+    <code>link rel="stylesheet" href="styles.css"</code>
+    <p>Se aconseja escribir esta línea lo antes posible (sobre todo, antes de los scripts), obligando así al navegador a aplicar los estilos cuanto antes y eliminar la falsa percepción visual de que la página está en blanco y no ha sido cargada por completo.</p>
+    
+</body>
+</html>
