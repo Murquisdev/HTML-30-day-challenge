@@ -4,5 +4,5 @@ Repositorio para realizar los retos propuestos de **HTML** por [Manzdev](https:/
 
 * [Día 1 (fácil)](https://github.com/Murquisdev/HTML-30-day-challenge/tree/main/dia01)
 * [Día 2 (fácil)](https://github.com/Murquisdev/HTML-30-day-challenge/tree/main/dia02)
-* [Día 3 (fácil)](#)
+* [Día 3 (fácil)](https://github.com/Murquisdev/HTML-30-day-challenge/tree/main/dia03)
 * [Día 4 (intermedio)](#)

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 3</h1>
+    <h2>Construye una página con un párrafo que tenga enlances internos y externos</h2>
+    <h3>Enlaces</h3>
+    <ul id="indice">
+        <li><a href="#href">Atributo <span class="ubuntu-bold">href</span></a></li>
+        <li><a href="#hreflang">Atributo <span class="ubuntu-bold">hreflang</span></a></li>
+        <li><a href="#download">Atributo <span class="ubuntu-bold">download</span></a></li>
+        <li><a href="#target">Atributo <span class="ubuntu-bold">target</span></a></li>
+        <li><a href="#rel">Atributo <span class="ubuntu-bold">rel</span></a></li>
+        <li><a href="#type">Atributo <span class="ubuntu-bold">rel</span></a></li>
+        <li><a href="#enlacesInternos">Atributo <span class="ubuntu-bold">Enlaces internos</span></a></li>
+    </ul>
+    <p>Los enlances son la base de internet, nos permiten navegar, es decir, movernos entre páginas, pero también sirven para moverse en la misma página.</p>
+    <pre class="ubuntu-mono-regular" >
+        <code>
+            &lta href="https://direccionweb.com"&gtWeb&lt/a&gt
+        </code>
+    </pre>
+    <p id="href">En el atributo <span class="ubuntu-bold">href</span> se indica la dirección web de destino.</p>
+    <p>Por ejemplo, voy a enlazar la página web de Manz en el siguiente texto: <a href="https://manz.dev/">Página web de Manz.</a></p>
+    <hr>
+    <p id="hreflang">El atributo <span class="ubuntu-bold">hreflang</span> se indica el idioma mediante un <a href="https://es.wikipedia.org/wiki/ISO_639-1">código ISO 639-1</a>(Los países en siglas de dos caracteres).</p>
+    <hr>
+    <p id="download">El atributo <span class="ubuntu-bold">download</span> se indica que es un archivo de descarga.</p>
+    <pre class="ubuntu-mono-regular" >
+        <code>
+            &lta href="/productos.pdf" download&gtDescargar productos&lt/a&gt
+        </code>
+    </pre>
+    <hr>
+    <p id="target">El atributo <span class="ubuntu-bold">target</span> se indica donde se va abrir el enlace, por defecto en la misma ventana, pero añadiendo <span class="ubuntu-regular-italic">_blank</span>, se abrirá en otra pestaña</p>
+    <pre class="ubuntu-mono-regular" >
+        <code>
+            &lta href="https://manz.dev" target="_blank"&gtPágina web de Manz&lt/a&gt
+        </code>
+    </pre>
+    <p>Otros valores del atributo target son:</p>
+    <ul>
+        <li><span class="ubuntu-regular-italic">_self</span>: Abre en la pestaña o <span class="ubuntu-regular-italic">iframe actual</span></li>
+        <li><span class="ubuntu-regular-italic">_parent</span>: Abre en el documento padre</li>
+        <li><span class="ubuntu-regular-italic">_top</span>: Abre en el documento raíz (padre global)</li>
+        <li><span class="ubuntu-regular-italic">nombre</span>: Abre en el <span class="ubuntu-regular-italic">iframe</span> con ese nombre</li>
+    </ul>
+    <hr>
+    <p id="rel">El atributo <span class="ubuntu-bold">rel</span>: Indicamos la relación con el contenido del enlace.</p>
+    <ul>
+        <li><span class="ubuntu-regular-italic">alternate</span>: Indica que el enlace es una versión alternativa del documento actual.</li>
+        <li><span class="ubuntu-regular-italic">author</span>: Indica que es el enlace de la web del autor del documento actual.</li>
+        <li><span class="ubuntu-regular-italic">bookmark</span>: El enlace es un permalink de la sección padre más cercana.</li>
+        <li><span class="ubuntu-regular-italic">help</span>: Indica que el enlace ofrece ayuda relacionada con la página actual.</li>
+        <li><span class="ubuntu-regular-italic">license</span>: Indica que la página actual está cubierta por la licencia referenciada.</li>
+        <li><span class="ubuntu-regular-italic">nofollow</span>: Indica que el enlace no está supervisado por el autor del sitio web.</li>
+        <li><span class="ubuntu-regular-italic">next</span>: Indica que el enlace es la parte siguiente del documento actual.</li>
+        <li><span class="ubuntu-regular-italic">noreferrer</span>: El navegador no envía la página de procedencia al visitar el enlace.</li>
+        <li><span class="ubuntu-regular-italic">search</span>: Indica que el enlace es una página para realizar búsquedas.</li>
+        <li><span class="ubuntu-regular-italic">tag</span>: Asocia una etiqueta al enlace especificado, en relación al documento actual.</li>
+        <li><span class="ubuntu-regular-italic">external</span>: Indica que el enlace no forma parte del sitio actual (recurso externo).</li> 	
+    </ul>
+    <pre class="ubuntu-mono-regular" >
+        <code>
+            Autor: &lta rel="author" href="https://manz.dev/"&gtManzDev&lt/a&gt
+            
+            Artículo anterior: &lta rel="prev" href="/thor-hammer-part-1"&gt&lt/a&gt
+            Artículo siguiente: &lta rel="next" href="/thor-hammer-part-3"&gt&lt/a&gt
+        </code>
+    </pre>
+    <hr>
+    <p id="type">El atributo <span class="ubuntu-bold">type</span>: Indicamos el tipo de recurso que está enlazando</p>
+    <pre class="ubuntu-mono-regular" >
+        <code>
+            &lta type="application/pdf" href="/prices.pdf"&gtExaminar fichero PDF con lista de precios&lt/a&gt
+        </code>
+    </pre>
+    <p>Los tipos se indican siguiendo la nomenclatura <a href="https://en.wikipedia.org/wiki/Media_type">tipo MIME</a> (tipo de medio), que se compone de dos partes separadas por /</p>
+    <hr>
+    <p id="enlacesInternos">Para poner enlaces dentro de la misma pagina necesitamos identificar de alguna forma donde queremos ir.</p>
+    <p>Para ello nos ayudamos del atributo <span class="ubuntu-bold">id</span>, con lo que podemos indicar al atributo <span class="ubuntu-bold">href</span> la dirección interna añadiendo el caracter <span class="ubuntu-bold">#</span></p>
+    <p>De esta forma es posible navegar dentro de la misma página, por ejemplo como el <a href="#indice">índice</a> de esta página</p>
+    <pre class="ubuntu-mono-regular" >
+        <code>
+            &lta href="#indice"&gtíndice&lt/a&gt
+        </code>
+    </pre>
+    <a href="https://lenguajehtml.com/html/texto/etiqueta-html-a/">Pista de Manz</a>
+</body>
+</html>
