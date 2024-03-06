@@ -1,0 +1,33 @@
+
+@import url('fonts.css');
+
+body{
+    background-color:beige;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+li{
+    list-style: none;
+    float: left;
+    margin-left: 12px;
+    
+}
+.navbar{
+    text-decoration: none;
+    background-color: bisque;
+    color: blue;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+.navbar:hover{
+    background-color: whitesmoke;
+}

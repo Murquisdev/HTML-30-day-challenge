@@ -13,23 +13,23 @@
     <p>HTML tiene hasta 6 niveles de titulares</p>
     <pre class="ubuntu-mono-regular" >
         <code>
-            &lth1&gtTitular 1&lt/h1&gt
-            &lth2&gtTitular 2&lt/h2&gt
-            &lth3&gtTitular 3&lt/h3&gt
-            &lth4&gtTitular 4&lt/h4&gt
-            &lth5&gtTitular 5&lt/h5&gt
-            &lth6&gtTitular 6&lt/h6&gt
+            &lt;h1&gt;Titular 1&lt;/h1&gt;
+            &lt;h2&gt;Titular 2&lt;/h2&gt;
+            &lt;h3&gt;Titular 3&lt;/h3&gt;
+            &lt;h4&gt;Titular 4&lt;/h4&gt;
+            &lt;h5&gt;Titular 5&lt;/h5&gt;
+            &lt;h6&gt;Titular 6&lt;/h6&gt;
         </code>
     </pre>
     <p>En esta página, Día 2 sería el título (h1), Página con titular, varios... sería el subtítulo (h2) y ¿Qué son los... sería la sección (h3) por ejemplo.</p>
     <h3>Insertar imágenes en HTML</h3>
-    <p>Para insertar imágenes en HTML se emplea la etiqueta <span class="ubuntu-bold">&ltimg src="" alt=""&gt</span></p>
+    <p>Para insertar imágenes en HTML se emplea la etiqueta <span class="ubuntu-bold">&lt;img src="" alt=""&gt;</span></p>
     <p>No se necesita la etiqueta de cierre e indicamos la dirección de la imagen en el atributo src="" y en alt="" se indicará un texto alternativo por si la imagen no carga o para los lectores de adaptabilidad.</p>
     <img src="psyduck.jpg" alt="Pokemon psyduck">
     <p>Psyduck, el <span class="ubuntu-bold">mejor</span> Pokemon de todos 😁</p>
     <p>También se le pueden añadir los atributos <span class="ubuntu-regular-italic">width</span> y <span class="ubuntu-regular-italic">height</span> para indicar el ancho y el alto en píxeles respectivamente</p>
     <p>Se considera buena práctica indicar un <span class="ubuntu-regular-italic">width</span> y <span class="ubuntu-regular-italic">height</span> aunque luego se cambien los valore mediante css, porque reserva el espacio en la carga de la página y evita saltos molestos durante esta. </p>
-    <h4>Más atributos de la etiqueta <span class="ubuntu-bold">&ltimg&gt</span></h4>
+    <h4>Más atributos de la etiqueta <span class="ubuntu-bold">&lt;img&gt;</span></h4>
     <p><span class="ubuntu-bold">Loading</span>:Indica si el navegador descarga inmediatamente la imagen o espera</p>
     <ul>
         <li>loading="<span class="ubuntu-bold">eager</span>": Por defecto, descarga la imagen.</li>
@@ -53,23 +53,23 @@
         <li>Densidad: Para indicar la densidad de la pantalla en píxeles se utiliza la letra <span class="ubuntu-bold">x</span> (3x, 2.5x,...)</li>
         <li>decoding="<span class="ubuntu-bold">sync</span>": El navegador decodifica primero esta imagen antes que el resto</li>
         <li>decoding="<span class="ubuntu-bold">auto</span>": El navegador decodifica primero otras imagenes ante que esta</li>
-        <pre class="ubuntu-mono-regular" >
-            <code>
-                &ltimg src="imagen_400w.jpg" alt="Logotipo HTML5"
-                srcset="imagen_400w.jpg 400w, imagen_900w.jpg 900w, imagen_1200w.jpg 1200w"&gt
-            </code>
-        </pre>
     </ul>
+    <pre class="ubuntu-mono-regular" >
+        <code>
+            &lt;img src="imagen_400w.jpg" alt="Logotipo HTML5"
+            srcset="imagen_400w.jpg 400w, imagen_900w.jpg 900w, imagen_1200w.jpg 1200w"&gt;
+        </code>
+    </pre>
     <p><span class="ubuntu-bold">sizes</span>: Se establecen unas condiciones según las <span class="ubuntu-bold ubuntu-regular-italic">media queries</span></p>
     <pre class="ubuntu-mono-regular" >
         <code>
-            &ltimg src="imagen_1200w.jpg" alt="Logotipo HTML5"
+            &lt;img src="imagen_1200w.jpg" alt="Logotipo HTML5"
              srcset="imagen_1200w.jpg 1200w,
                      imagen_900w.jpg 900w,
                      imagen_400w.jpg 400w"
-            sizes="(width &gt 900px) 900px,
-                   ((width &gt 480px) and (width &lt= 800px)) 480px,
-                   ((width &lt= 480px)) 320px"&gt
+            sizes="(width &gt; 900px) 900px,
+                   ((width &gt; 480px) and (width &lt;= 800px)) 480px,
+                   ((width &lt;= 480px)) 320px"&gt;
         </code>
     </pre>
 
