@@ -1,5 +1,6 @@
 body{
-    background-color:beige;
+    background-color:rgb(87, 87, 87);
+    color: antiquewhite;
     font-size: 20px;
 }
 h1,h2,h3{
@@ -13,4 +14,7 @@ h1,h2,h3{
 }
 .red{
     color: red;
+}
+a{
+    color:whitesmoke;
 }

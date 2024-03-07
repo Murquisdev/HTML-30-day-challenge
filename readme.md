@@ -11,7 +11,7 @@ Repositorio para realizar los retos propuestos de **HTML** por [Manzdev](https:/
 | 02 | Crea una página con un titular, varios párrafos de texto y una imagen.                                                | 📁 [02/](/dia02/) |[Día 02](https://murquisdev.github.io/HTML-30-day-challenge/dia02/index.html) |
 | 03 | Construye una página con un párrafo que tenga enlaces internos y externos (a otros sitios web).                       | 📁 [03/](/dia03/) |[Día 03](https://murquisdev.github.io/HTML-30-day-challenge/dia03/index.html) |
 | 04 | Valida el código HTML de tus ejemplos anteriores (y los siguientes a partir de ahora).                                | 📁 [04/](/dia04/) |[Día 04](https://murquisdev.github.io/HTML-30-day-challenge/dia04/index.html) |
-| 05 | Ponle un título y una descripción al documento, ideal para SEO.                                                       |                |
+| 05 | Ponle un título y una descripción al documento, ideal para SEO.                                                       | 📁 [05/](/dia05/) |[Día 05](https://murquisdev.github.io/HTML-30-day-challenge/dia05/index.html) |
 | 06 | Crea un grupo de secciones (acordeón) donde se despliegue sólo uno a la vez.                                          |                |
 | 07 | Coloca una imagen en formato JPEG-XL. Si el navegador no la soporta, que use AVIF. Sino, que use JPG.                 |                |
 | 08 | Crear un párrafo de texto con palabras destacadas en diferentes colores.                                              |                |

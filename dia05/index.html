@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 5</h1>
+    <h2>Añadir un título y una descripción al documento, ideal para SEO</h2>
+    <p>Un documento HTML se compone de dos partes bien diferenciadas, <span class="ubuntu-bold">Head</span> y <span class="ubuntu-bold">Body</span></p>
+    <h3>Etiquetas de la cabecera del documento (<span class="ubuntu-regular-italic">HEAD</span>)</h3>
+    <p>En la etiqueta HEAD se indican los metadatos, información sobre el documento (título, descripción...)y las relaciones con otros documentos (CSS, JS...)</p>
+    <ul>
+        <li><span>&lt;title&gt;</span>: Indica el título de la página en la pestaña del navegador o en los motores de búsqueda (Google por ejemplo)</li>
+        <li><span>&lt;base&gt;</span>: URL base de los enlaces (usado para gestionar rutas relativas).</li>
+        <li><span>&lt;link&gt;</span>: Establece una relación del documento actual con otro externo (CSS, JS...).</li>
+        <li><span>&lt;style&gt;</span>: Crea estilos CSS que afectarán únicamente al documento actual. También se puede usar en el <span class="ubuntu-regular-italic">body</span></li>
+        <li><span>&lt;script&gt;</span>: Indica un script a cargar o ejecutar en la página actual. También se puede usar en el <span class="ubuntu-regular-italic">body</span></li>
+        <li><span>&lt;meta&gt;</span>: Establece un metadato específico en el documento actual.</li>
+    </ul>
+    Se recomienda que al menos siempre existan estas dos etiquetas:
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;title&gt;Título del documento&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+        </code>
+    </pre>
+    Además añadir una descripción ayuda al SEO y es la información que aparecerá en los buscadores cuando alguien encuentre tu página
+    <h3>Etiqueta <span class="ubuntu-bold">META</span></h3>
+    <p>Como norma general, la etiqueta <span class="ubuntu-regular-italic">META</span> tendrá los atributos <span class="ubuntu-bold">name</span> y <span class="ubuntu-bold">content</span>.</p>
+    <p>Dependiendo del valor de <span class="ubuntu-bold">name</span> se indicará el valor de <span class="ubuntu-bold">content</span></p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;meta name="..." content="..."&gt;
+        </code>
+    </pre>
+    <p>La codificación de texto es muy importante para no encontrar caracteres raros o que el navegador no sabe interpretar</p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;meta charset="utf-8"&gt;
+        </code>
+    </pre>
+    <p>El tipo de codificación más extendida y recomendada es <span class="ubuntu-regular-italic">utf-8</span></p>
+    <h4>Etiquetas de metadatos y SEO</h4>
+    <ul>
+        <li><span class="ubuntu-bold">description</span>: Indica la descripción de la página que aparece en buscadores (texto)</li>
+        <li><span class="ubuntu-bold">keywords</span>: Lista de palabras clave separadas por comas. Google no la tiene en cuenta.</li>
+        <li><span class="ubuntu-bold">author</span>: Indica el nombre del autor de la página.</li>
+        <li><span class="ubuntu-bold">application-name</span>: Indica el nombre de la aplicación web. Debería usarse sólo si es una webapp.</li>
+        <li><span class="ubuntu-bold">generator</span>: Indica el software utilizado para crear la página web.</li>
+        <li><span class="ubuntu-bold">theme-color</span>: Indica el color (en HEXADECIMAL) con el que mostrar la barra del navegador</li>
+    </ul>
+    <p>En la etiqueta meta <span class="ubuntu-regular-italic">description</span> se añadirán unas frases a modo de resumen de la página, suele ser un texto entre 50 y 160 carácteres </p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;meta name="description" content="En esta página encontrarás documentación sobre HTML."&gt;
+            &lt;meta name="keywords" content="html, lenguaje, lenguaje de marcado, código html, etiqueta"&gt;
+            &lt;meta name="author" content="Manz"&gt;
+            &lt;meta name="application-name" content="ManzDev Skynet"&gt;
+            &lt;meta name="generator" content="VSCode"&gt;
+            &lt;meta name="theme-color" content="#1e7bbf"&gt;
+        </code>
+    </pre>
+    <p>Hay más etiquetas, se recomienda repasar la <a href="https://lenguajehtml.com/html/cabecera/etiqueta-html-meta/">pista de Manz 2</a></p>
+
+    <a href="https://lenguajehtml.com/html/cabecera/que-son-etiquetas-cabecera/">Pista de Manz</a>
+    <a href="https://lenguajehtml.com/html/cabecera/etiqueta-html-meta/">Pista de Manz 2</a>
+</body>
+</html>

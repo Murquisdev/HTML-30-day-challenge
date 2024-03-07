@@ -2,7 +2,8 @@
 @import url('fonts.css');
 
 body{
-    background-color:beige;
+    background-color:rgb(87, 87, 87);
+    color: antiquewhite;
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -16,4 +17,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .red{
     color: red;
+}
+a{
+    color:whitesmoke;
 }
