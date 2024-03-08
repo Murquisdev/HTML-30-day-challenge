@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 6</title>
+    <meta name="description" content="Solución del reto del día 6 del HTML-30-day-challenge de ManzDev. Crear un grupo de secciones (acordeón) donde se despliegue solo uno a la vez">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 6</h1>
+    <h2>Crear un grupo de secciones (acordeón) donde se depliegue sólo uno a la vez.</h2>
+    <p>Para poder crear elementos desplegables (o acordeón HTML) necesitamos la etiqueta <span class="ubuntu-bold">DETAILS</span></p>
+    <p>Esta etiqueta actua como un <span class="ubuntu-bold">DIV</span>, salvo que su contenido se muestra inicialmente oculto.</p>
+    <details open>
+        <pre class="ubuntu-mono-regular">
+            <code>
+                &lt;details&gt;
+                &lt;p&gt;Esto es una información que en principio aparecerá oculta.&lt;/p&gt;
+                &lt;/details&gt;
+            </code>
+        </pre>
+    </details>
+    <p>Se le puede añadir el atributo <span class="ubuntu-regular-italic">open</span> para que se muestre el contenido sin falta de hacer <span class="ubuntu-regular-italic">click</span></p>
+    <hr>
+    <p>Por defecto, la etiqueta <span class="ubuntu-regular-italic">DETAILS</span> añade el título "detalles", aunque depende del idioma del navegador</p>
+    <p>Este título se puede cambiar añadiendo la etiqueta <span class="ubuntu-bold">SUMMARY</span> dentro de la etiqueta <span class="ubuntu-regular-italic">DETAILS</span></p>
+    <details open>
+        <summary>Cambiar el título del desplegable</summary>
+        <pre class="ubuntu-mono-regular">
+            <code>
+                &lt;details&gt;
+                    &lt;summary&gt;Cambiar el título del desplegable&lt;/summary&gt;
+                    &lt;p&gt;información a mostrar&lt;/p&gt;
+                &lt;/details&gt;
+            </code>
+        </pre>
+    </details>
+    <hr>
+    <p>Si tenemos varios acordeones y le asignamos el mismo atributo <span class="ubuntu-regular-italic">name</span>, conseguimos que solo se muestre un acordeón abierto y el resto se cierren, sin necesidad de JS.</p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;details name="acordeon"&gt;
+                &lt;summary&gt;Cambiar el título del desplegable&lt;/summary&gt;
+                &lt;p&gt;información a mostrar&lt;/p&gt;
+            &lt;/details&gt;
+        </code>
+    </pre>
+    <details name="acordeon" open>
+        <summary>Acordeón 1</summary>
+        <p>Texto 1</p>
+    </details>
+    <details name="acordeon">
+        <summary>Acordeón 2</summary>
+        <p>Texto 2</p>
+    </details>
+    <details name="acordeon">
+        <summary>Acordeón 3</summary>
+        <p>Texto 3</p>
+    </details>
+    <p>En el momento de escribir esto, <a href="https://caniuse.com/mdn-html_elements_details_name">Firefox aún <span class="ubuntu-bold">NO</span> lo soporta</a>, el resto de navegadores sí.</p>
+
+    <a href="https://lenguajehtml.com/html/interactivas/etiqueta-html-details/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>
