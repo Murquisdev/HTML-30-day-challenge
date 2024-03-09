@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 7</title>
+    <meta name="description" content="Solución del reto del día 7 del HTML-30-day-challenge de ManzDev. Coloca una imagen en formato JPEG-XL. Si el navegador no la soporta, que use AVIF. Sino, que use JPG.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 7</h1>
+    <h2>Coloca una imagen en formato JPEG-XL. Si el navegador no la soporta, que use AVIF. Sino, que use JPG.</h2>
+    <picture>
+        <source src="./img/psyduck.jxl">
+        <source src="./img/psyduck.avif">
+        <source src="./img/psyduck.jpeg">
+        <img src="./img/psyduck.jpg" alt="Psyduck en la serie Conserje Pokémon" title="Psyduck en la serie Conserje Pokémon">
+    </picture>
+    <p>Hay dos etiquetas HTML que nos permiten elegir que tipo de imagen se cargará en el navegador según los criterios que le indiquemos</p>
+    <p>Estas etiquetas son <span class="ubuntu-bold">PICTURE</span> y <span class="ubuntu-bold">SOURCE</span></p>
+    <ul>
+        <li><span class="ubuntu-bold">picture</span>: Funciona a modo de contenedor, es donde indicaremos las diferentes imágenes a cargar</li>
+        <li><span class="ubuntu-bold">source</span>: Funciona a modo de condición, el navegador irá comprobando por orden si puede cargar las imágenes.</li>
+    </ul>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;picture&gt;
+                &lt;source srcset="image.avif"&gt;
+                &lt;source srcset="image.webp"&gt;
+                &lt;img src="image.jpg" alt="Descripción breve de la imagen"&gt;
+            &lt;/picture&gt;
+        </code>
+    </pre>
+    <p>El navegador intentará cargar la imagen "image.avif", si no puede, pasa a "image.webp y por último a image.jpg</p>
+    <p>Lo que está haciendo el navegador es poner el atributo <span class="ubuntu-regular-italic">srcset</span> en el atributo <span class="ubuntu-regular-italic">src</span> de la etiqueta <span class="ubuntu-regular-italic">img</span></p>
+    <hr>
+    <h3>Source</h3>
+    <p>La etiqueta <span class="ubuntu-bold">source</span> tiene diferentes atributos posibles</p>
+    <ul>
+        <li><span class="ubuntu-bold">srcset</span>: Serie de imágenes (separadas por coma) que se utilizarán. Atributo obligatorio.</li>
+        <li><span class="ubuntu-bold">src</span>: Se utiliza cuando se indica audio o video. En imágenes es ignorado.</li>
+        <li><span class="ubuntu-bold">sizes</span>: Consulta de medios (media queries) para determinar si la imagen o imágenes se mostrarán.</li>
+        <li><span class="ubuntu-bold">media</span>: Condición que se debe cumplir para que muestre la imagen. Ver media queries.</li>
+        <li><span class="ubuntu-bold">type</span>: Sugerencia para indicar al navegador el formato que se utiliza. Opcional.</li>
+    </ul>
+    <p>En el siguiente ejemplo se mostrará una imagen según el ancho de la pantalla</p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;picture&gt;
+                &lt;source media="(width &gt;= 900px)"
+                        srcset="logo-large.png"&gt;
+                &lt;source media="(width &gt;= 600px) and (width &lt; 900px)"
+                        srcset="logo-medium.png"&gt;
+                &lt;source media="(width &lt; 600px)"
+                        srcset="logo-small.png"&gt;
+                &lt;img src="logo-medium.png" alt="HTML5 logo"&gt;
+            &lt;/picture&gt;
+        </code>
+    </pre>
+    <p>En este ejemplo, además de comprobar el ancho de pantalla se comprueba la densidad de píxeles del dispositivo.</p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;picture&gt;
+                &lt;source media="(width &gt;= 900px)"
+                        srcset="logo-large.png,
+                                logo-large-hd.png 2x,
+                                logo-large-fhd.png 3x"&gt;
+                &lt;source media="(width &gt;= 600px) and (width &lt; 900px)"
+                        srcset="logo-medium.png,
+                                logo-medium-hd.png 2x,
+                                logo-medium-fhd.png 3x"&gt;
+                &lt;source media="(width &lt; 600px)"
+                        srcset="logo-small.png,
+                                logo-small-hd.png 2x,
+                                logo-small-fhd.png 3x"&gt;
+                &lt;img src="logo-medium.png" alt="HTML5 logo"&gt;
+            &lt;/picture&gt;
+        </code>
+    </pre>
+    <p>Si no se pone nada, por defeco es 1x, pero si indicamos 2x, 3x... comprobará la densidad de píxeles del dispositivo.</p>
+    <a href="https://lenguajehtml.com/html/multimedia/etiqueta-html-picture/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>
