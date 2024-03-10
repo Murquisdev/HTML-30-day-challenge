@@ -10,10 +10,11 @@
 <body>
     <h1>Día 7</h1>
     <h2>Coloca una imagen en formato JPEG-XL. Si el navegador no la soporta, que use AVIF. Sino, que use JPG.</h2>
+    <p>Psyduck en la serie Conserje Pokémon</p>
     <picture>
-        <source src="./img/psyduck.jxl">
-        <source src="./img/psyduck.avif">
-        <source src="./img/psyduck.jpeg">
+        <source srcset="./img/psyduck.jxl" type="image/jxl">
+        <source srcset="./img/psyduck.avif" type="image/avif">
+        <source srcset="./img/psyduck.jpeg">
         <img src="./img/psyduck.jpg" alt="Psyduck en la serie Conserje Pokémon" title="Psyduck en la serie Conserje Pokémon">
     </picture>
     <p>Hay dos etiquetas HTML que nos permiten elegir que tipo de imagen se cargará en el navegador según los criterios que le indiquemos</p>

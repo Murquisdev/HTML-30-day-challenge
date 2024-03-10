@@ -12,9 +12,9 @@ Repositorio para realizar los retos propuestos de **HTML** por [Manzdev](https:/
 | 03 | Construye una página con un párrafo que tenga enlaces internos y externos (a otros sitios web).                       | 📁 [03/](/dia03/) |[Día 03](https://murquisdev.github.io/HTML-30-day-challenge/dia03/index.html) |
 | 04 | Valida el código HTML de tus ejemplos anteriores (y los siguientes a partir de ahora).                                | 📁 [04/](/dia04/) |[Día 04](https://murquisdev.github.io/HTML-30-day-challenge/dia04/index.html) |
 | 05 | Ponle un título y una descripción al documento, ideal para SEO.                                                       | 📁 [05/](/dia05/) |[Día 05](https://murquisdev.github.io/HTML-30-day-challenge/dia05/index.html) |
-| 06 | Crea un grupo de secciones (acordeón) donde se despliegue sólo uno a la vez.                                          | 📁 [06/](/dia06/) |[Día 06](https://murquisdev.github.io/HTML-30-day-challenge/dia06/index.html) |              |
-| 07 | Coloca una imagen en formato JPEG-XL. Si el navegador no la soporta, que use AVIF. Sino, que use JPG.                 | 📁 [07/](/dia07/) |[Día 07](https://murquisdev.github.io/HTML-30-day-challenge/dia07/index.html) |             |
-| 08 | Crear un párrafo de texto con palabras destacadas en diferentes colores.                                              |                |
+| 06 | Crea un grupo de secciones (acordeón) donde se despliegue sólo uno a la vez.                                          | 📁 [06/](/dia06/) |[Día 06](https://murquisdev.github.io/HTML-30-day-challenge/dia06/index.html) |
+| 07 | Coloca una imagen en formato JPEG-XL. Si el navegador no la soporta, que use AVIF. Sino, que use JPG.                 | 📁 [07/](/dia07/) |[Día 07](https://murquisdev.github.io/HTML-30-day-challenge/dia07/index.html) |
+| 08 | Crear un párrafo de texto con palabras destacadas en diferentes colores.                                              | 📁 [08/](/dia08/) |[Día 08](https://murquisdev.github.io/HTML-30-day-challenge/dia08/index.html) |
 | 09 | Crea un pergamino con una lista de objetos, donde se numere con números romanos (mayúsculas).                         |                |
 | 10 | Inserta un video de Youtube en una página y estila con CSS para que se vea bien.                                      |                |
 | 11 | Escribe un texto con super/subíndices (fórmulas químicas, por ejemplo).                                               |                |

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 8</title>
+    <meta name="description" content="Solución del reto del día 8 del HTML-30-day-challenge de ManzDev. Crear un párrafo de texto con palabras destacadas en diferentes colores.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 8</h1>
+    <h2>Crear un párrafo de texto con palabras destacadas en diferentes colores.</h2>
+    <p>Para resaltar texto se utiliza la etiqueta <span class="ubuntu-bold">MARK</span></p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;p&gt;
+                Este texto no está resaltado. &lt;mark&gt;Este sí está resaltado&lt;/mark&gt;
+            &lt;/p&gt;
+        </code>
+    </pre>
+    <p>Es una etiqueta <mark>semántica</mark> que se utiliza para llamar la atención del lector y crea un <mark>efecto de subrayado.</mark></p>
+    <p>El efecto de subrayado se puede modificar con CSS. Por ejemplo añadiendo una clase</p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;p&gt;
+                &lt;mark class="marcadoRojo"&gt;Texto subrayado de color rojo&lt;/mark&gt;
+            &lt;/p&gt;
+        </code>
+    </pre>
+    <ul>
+        <li><mark class="marcadoRojo">Subrayado rojo</mark></li>
+        <li><mark class="marcadoNaranja">Subrayado naranja</mark></li>
+        <li><mark class="marcadoVerde">Subrayado verde</mark></li>
+    </ul>
+    <p>Así podemos <mark>crear</mark> un <mark class="marcadoRojo">texto</mark> con <mark class="marcadoNaranja">diferentes</mark> <mark class="marcadoVerde">subrayados</mark>.</p>
+    <a href="https://lenguajehtml.com/html/texto/etiqueta-html-mark/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>

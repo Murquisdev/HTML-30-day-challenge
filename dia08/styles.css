@@ -1,0 +1,29 @@
+
+@import url('fonts.css');
+
+body{
+    background-color:rgb(87, 87, 87);
+    color: antiquewhite;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+a{
+    color:whitesmoke;
+}
+.marcadoRojo{
+    background-color: tomato;
+}
+.marcadoNaranja{
+    background-color:darkorange;
+}
+.marcadoVerde{
+    background-color:darkgreen
+}
