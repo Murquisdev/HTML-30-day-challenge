@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 9</title>
+    <meta name="description" content="Solución del reto del día 9 del HTML-30-day-challenge de ManzDev. Crea un pergamino con una lista de objetos, donde se numere con números romanos (mayúsculas).">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 9</h1>
+    <h2>Crea un pergamino con una lista de objetos, donde se numere con números romanos (mayúsculas).</h2>
+    <p>Para crear listas en HTML se utilizan las etiquetas <span class="ubuntu-bold">UL</span> <span class="ubuntu-regular-italic">(unorder list)</span> para listas desordenadas y <span class="ubuntu-bold">OL</span> <span class="ubuntu-regular-italic">(order list)</span> para listas ordenadas</p>
+    <p>Luego cada elemento de la lista tiene que estar entre las etiquetas <span class="ubuntu-bold">li</span> <span class="ubuntu-regular-italic">(list item)</span></p>
+    <p>A estos items se les puede modificar el símbolo que muestran, el número, añadir metadatos,... añadiendo atributos</p>
+    <ul>
+        <li> <span class="ubuntu-bold">value</span>: Sirve para añdir un valor número como metadato, que se podrá utilizar en CSS o JS. Se mostrará ese dato si la lista es <span class="ubuntu-regular-italic">OL</span></li>
+        <li> <span class="ubuntu-bold">start</span>: Indica el número del primer ítem de la lista y del que empezará a contar.</li>
+        <li> <span class="ubuntu-bold">type</span>: Lista con números enteros, letras o números romanos (minúsculas o mayúsculas). (1 | a | A | i | I )</li>
+    </ul>
+
+    <div class="contenedor">
+        <h3>Lista de los 10 primeros emperadores romanos</h3>
+        <img class="pergamino" src="./img/pergamino.png" alt="Un pergamino">
+        <ol class="listaEmperadores" type="I">
+            <li>Augusto</li>
+            <li>Tiberio</li>
+            <li>Calígula</li>
+            <li>Claudio</li>
+            <li>Nerón</li>
+            <li>Galba</li>
+            <li>Otón</li>
+            <li>Vitelio</li>
+            <li>Vespasiano</li>
+            <li>Tito</li>
+        </ol>
+    </div>
+    <a href="https://lenguajehtml.com/html/agrupacion/etiquetas-html-ul-ol/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>
