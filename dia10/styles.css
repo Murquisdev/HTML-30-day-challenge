@@ -23,7 +23,6 @@ a{
 }
 .pergamino{
    float: left;
-   z-index: -10;
 }
 .listaEmperadores{
     float: left;
@@ -32,9 +31,9 @@ a{
     left: -375px;
     color: rgb(87, 87, 87);
 }
-@media (width <= 650px) {
-    .listaEmperadores{
-        top: -425px;
-        left: 120px;
-    }
-  }
+iframe{
+    display: block;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 4px 4px;
+}

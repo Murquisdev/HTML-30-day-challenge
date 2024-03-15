@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 10</title>
+    <meta name="description" content="Solución del reto del día 10 del HTML-30-day-challenge de ManzDev. Busca 5 videos de youtube. Inserta uno en la página. Haz que se pueda cambiar entre ellos como una TV. Dale estilo con CSS para que se vea más bonito.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 10</h1>
+    <h2>Busca 5 videos de youtube. Inserta uno en la página. Haz que se pueda cambiar entre ellos como una TV. Dale estilo con CSS para que se vea más bonito..</h2>
+    <p>Para añadir contenido externo a una página web se usa la etiqueta <span class="ubuntu-bold">IFRAME</span></p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;iframe src="link del contenido" width="560" height="315"&gt;&lt;/iframe&gt;
+        </code>
+    </pre>
+    <p>Tiene diferentes atributos:</p>
+    <ul>
+        <li> <span class="ubuntu-bold">name</span>: Sirve para crear una referencia al marco y así poder cargar diferente contenido externo en él.</li>
+        <li> <span class="ubuntu-bold">srcdoc</span>: Permite añadir directamente código fuente (html) al <span class="ubuntu-regular-italic">iframe</span></li>
+        <li> <span class="ubuntu-bold">allowfullscreen</span>: Sirve para indicar si se permite poner el <span class="ubuntu-regular-italic">iframe</span> en pantalla completa</li>
+        <li> 
+            <span class="ubuntu-bold">loading</span>: Indica la forma de cargar el <span class="ubuntu-regular-italic">iframe</span>
+            <ul>
+                <li><span class="ubuntu-bold">eager</span>: Por defecto, el contenido se dercaga inmediatamente</li>
+                <li><span class="ubuntu-bold">lazy</span>: Se pospone la descarga</li>
+            </ul>
+        </li>
+    </ul>
+    <p>En el siguiente ejemplo, al hacer click en el enlace, se abrirá el buscador Bing en el <span class="ubuntu-regular-italic">iframe</span></p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;a href="https://www.bing.com/" target="marco">Abrir buscador Bing&lt;/a&gt;
+
+            &lt;iframe name="marco" width="100%" height="450"
+                src="https://www.youtube.com/embed/Imeq3GeRttw"&gt;
+            &lt;/iframe&gt;
+        </code>
+    </pre>
+    <p>En el siguiente ejemplo, se mostrará en el contenido de <span class="ubuntu-regular-italic">srcdoc</span> si puede cargarlo, sino cargará <span class="ubuntu-regular-italic">src</span></p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;iframe src="http://pagina.com/apartado/"
+                srcdoc="&lt;p&gt;¡Hola! ¡Soy el &lt;strong&gt;texto del iframe&lt;/strong&gt;!&lt;/p&gt;"&gt;
+            &lt;/iframe&gt;
+        </code>
+    </pre>
+    <p>Eliga que video ver</p>
+    <ul>
+        <li><a href="https://www.youtube.com/embed/kibZQylgbj4?si=VUEb3tTmyMZN5sEM" target="marco">Trailer Pokémon Concierge</a></li>
+        <li><a href="https://www.youtube.com/embed/PqYkpkgqlpo?si=vCA9jofx9YzsgCuU" target="marco">Making of de Pokémon Concierge</a></li>
+        <li><a href="https://www.youtube.com/embed/Nke5iI9HbHI?si=n0KcKUQwt1kU1H5Y" target="marco">Theme Song de Pokémon Concierge</a></li>
+        <li><a href="https://www.youtube.com/embed/rWSPzsj5VaU?si=LeFhz7aQvpr78HKv" target="marco">Psyduck usando su poder en detective Pikachu</a></li>
+        <li><a href="https://www.youtube.com/embed/GpyaSWVPRe8?si=2MXZUGY0e8MIw5cM" target="marco">Psyduck en detective Pikachu</a></li>
+    </ul>
+    <iframe src="https://www.youtube.com/embed/kibZQylgbj4?si=VUEb3tTmyMZN5sEM" name="marco" width="700" height="500"></iframe>
+    
+    
+    
+    
+    
+
+    
+
+
+    <a href="https://lenguajehtml.com/html/agrupacion/etiquetas-html-ul-ol/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>
