@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 12</title>
+    <meta name="description" content="Solución del reto del día 12 del HTML-30-day-challenge de ManzDev. Crea un slider que permita seleccionar un número entre 1-50 y lo muestre en vivo al cambiar. Requiere algo de Javascript.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 12</h1>
+    <h2>Crea un slider que permita seleccionar un número entre 1-50 y lo muestre en vivo al cambiar. Requiere algo de Javascript.</h2>
+    <p>HTML tiene una serie de etiquetas que permiten introducir datos al usuario y que se suelen utilizar en formularios. Estas son las etiquetas <span class="ubuntu-bold">input</span></p>
+    <p>Las etiquetas <span class="ubuntu-regular-italic">input</span> tienen el atributo <span class="ubuntu-bold">type</span> con el que podemos restringir al usuario que datos pueden introducir.</p>
+    <p>En nuestro caso necesitamos que introduzca solo números, con lo que se pueden usar dos etiquetas <span class="ubuntu-regular-italic">type</span>:</p>
+    <ul>
+        <li><span class="ubuntu-bold">number</span>: Permite introducir un número cualquiera</li>
+        <li><span class="ubuntu-bold">range</span>: Permite introducir un número dentro de un rango (por defecto no muestra el valor elegido y el rango es entre 1 y 100)</li>
+        <ul>
+            <li><span class="ubuntu-bold">output</span>: Si se quiere mostrar el número se añade la etiqueta <span class="ubuntu-bold">output</span> justo después del input y se puede actualizar mediante el envento de JS <span class="ubuntu-bold">onInput</span></li>
+        </ul>
+    </ul>
+    <p>También se puede limitar los valores a introducir con los atributos <span class="ubuntu-bold">min</span> y <span class="ubuntu-bold">max</span></p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;form method="post" action="/send/"&gt;
+                Un valor numérico:
+                &lt;input type="number" value="1" min="1" max="50"&gt;
+              
+                Un valor numérico en rango:
+                &lt;input type="range" value="1" min="1" max="50"
+                       onInput="this.nextElementSibling.value = this.value"&gt;
+                &lt;output&gt;25&lt;/output&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
+    <form method="post" action="/send/">
+        Un valor numérico:
+        <input type="number" value="1" min="1" max="50">
+        <br>
+        Un valor numérico en rango:
+        <input type="range" value="1" min="1" max="50"
+               onInput="this.nextElementSibling.value = this.value">
+        <output>1</output>
+      </form>
+   <p>Otro atributo interesante es <span class="ubuntu-bold">step</span> que permite añadir la cantidad que sumará al usar las flechas o el slider.</p>
+   <form method="post" action="/send/">
+        Un valor numérico:
+        <input type="number" value="1" min="1" max="50" step="3">
+        <br>
+        Un valor numérico en rango:
+        <input type="range" value="1" min="1" max="50" step="3"
+            onInput="this.nextElementSibling.value = this.value">
+        <output>1</output>
+    </form>
+    <br>
+    <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-numeros/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>
