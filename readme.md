@@ -18,7 +18,7 @@ Repositorio para realizar los retos propuestos de **HTML** por [Manzdev](https:/
 | 08 | Crear un párrafo de texto con palabras destacadas en diferentes colores.                                              | 📁 [08/](/dia08/) |[Día 08](https://murquisdev.github.io/HTML-30-day-challenge/dia08/index.html) |
 | 09 | Crea un pergamino con una lista de objetos, donde se numere con números romanos (mayúsculas).                         | 📁 [09/](/dia09/) |[Día 09](https://murquisdev.github.io/HTML-30-day-challenge/dia09/index.html) |
 | 10 | Inserta un video de Youtube en una página y estila con CSS para que se vea bien.                                      | 📁 [10/](/dia10/) |[Día 10](https://murquisdev.github.io/HTML-30-day-challenge/dia10/index.html) |
-| 11 | Escribe un texto con super/subíndices (fórmulas químicas, por ejemplo).                                               |                |
+| 11 | Escribe un texto con super/subíndices (fórmulas químicas, por ejemplo).                                               | 📁 [11/](/dia11/) |[Día 11](https://murquisdev.github.io/HTML-30-day-challenge/dia11/index.html) |
 | 12 | Crea un slider que permita seleccionar un número entre 1-50 y lo muestre en vivo al cambiar.                          |                |
 | 13 | Crea una barra medidora que muestre los tickets vendidos en un cine (64/100 tickets vendidos).                        |                |
 | 14 | Muestra un bloque de fragmento de código CSS en una página (sin resaltado de colores).                                |                |
