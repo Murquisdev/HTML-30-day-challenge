@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 13</title>
+    <meta name="description" content="Solución del reto del día 13 del HTML-30-day-challenge de ManzDev. Crea una barra medidora que muestre los tickets vendidos en un cine (Ejemplo: 64/100 tickets vendidos).">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Día 13</h1>
+    <h2>Crea una barra medidora que muestre los tickets vendidos en un cine (Ejemplo: 64/100 tickets vendidos).</h2>
+    <p>La etiqueta  <span class="ubuntu-bold">meter</span> nos permite mostrar un nivel o escala de un valor y tiene los siguientes atributos:</p>
+    <ul>
+        <li><span class="ubuntu-bold">value</span>: Valor actual del medidor.</li>
+        <li><span class="ubuntu-bold">min</span>: Valor mínimo posible</li>
+        <li><span class="ubuntu-bold">max</span>: Valor máximo posible</li>
+        <li><span class="ubuntu-bold">low</span>: Indica el umbral donde se considera bajo (opcional) (rojo)</li>
+        <li><span class="ubuntu-bold">high</span>: Indica el umbral donde se considera alto (opcional) (amarillo)</li>
+        <li><span class="ubuntu-bold">optimun</span>: Indica el umbral donde se considera óptimo (opcional) (verde)</li>
+    </ul>
+    <p>Por defecto el valor mínimo será 0.0 y el máximo 1.0. En el siguiente ejemplo mostrará un el medidor a la mitad</p>
+    <p>La etiqueta <span class="ubuntu-regular-italic">meter</span> <span class="ubuntu-bold">NO</span> deberá usarse para medir un progreso, para eso ya existe la etiqueta <span class="ubuntu-bold">progress</span></p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;meter min="0" max="100" value="75" low="25" high="75" optimum="100"&gt;
+        </code>
+    </pre>
+    <p>Valor 24</p><meter min="0" max="100" value="24" low="25" high="75" optimum="100"></meter>
+    <p>Valor 25</p><meter min="0" max="100" value="25" low="25" high="75" optimum="100"></meter>
+    <p>Valor 75</p><meter min="0" max="100" value="75" low="25" high="75" optimum="100"></meter>
+    <p>Valor 100</p><meter min="0" max="100" value="100" low="25" high="75" optimum="100"></meter>
+    <p>El reto nos propone un ejemplo de 64 tickets sobre 100 vendidos, con lo que se podía hacer una escala al revés.</p>
+    <pre class="ubuntu-mono-regular">
+        <code>
+            &lt;meter min="0" max="100" value="64" optimum="20" low="40" high="80"&gt;
+        </code>
+    </pre>
+    <p>Así por ejemplo se podría indicar cuantas entradas quedan de un golpe visual</p>
+    <p>20 tickets vendidos</p><meter min="0" max="100" value="20" optimum="20" low="40" high="80"></meter>
+    <p>64 tickets vendidos</p><meter min="0" max="100" value="64" optimum="20" low="40" high="80"></meter>
+    <p>90 tickets vendidos</p><meter min="0" max="100" value="90" optimum="20" low="40" high="80"></meter>
+    <br><br>
+    <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-meter/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>
