@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 14</title>
+    <meta name="description" content="Solución del reto del Día 14 del HTML-30-day-challenge de ManzDev. Muestra un bloque de fragmento de código CSS en una página. Si quieres ir al máximo, añade una librería Javascript para añadirle resaltado de colores.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <h1>Día 14</h1>
+    <h2>Muestra un bloque de fragmento de código CSS en una página. Si quieres ir al máximo, añade una librería Javascript para añadirle resaltado de colores.</h2>
+    <p>La etiqueta <span class="ubuntu-bold">pre</span> indica a los navegadores que tienen que respestar los saltos de línea, espacios, etc. Además por defecto muestra un tipo de texto monoespaciado, que es el que se suele utilizar en programación.</p>
+    <p>Normalmente dentro se pone la etiqueta <span class="ubuntu-bold">code</span>, que no tiene una función específica, pero se suele utilizar para añadir clases que formatén el texto que suelen venir en librerías de Javascript.</p>
+    <p>Librerías de resaltado de sintaxis</p>
+    <ul>
+        <li><span class="ubuntu-bold"><a href="https://prismjs.com/">Prism</a></span>: Restaltado de sintaxis, extensible con plugins y temas.</li>
+        <li><span class="ubuntu-bold"><a href="https://highlightjs.org">Highlight</a></span>: Resaltado de sintaxis.</li>
+        <li><span class="ubuntu-bold"><a href="https://shiki.matsu.io/">Shiki</a></span>: Resaltado de sintaxis al estilo de VS Code.</li>
+    </ul>
+    <p>A partir de ahora utilizaré la librería de Prism, la cual puedes descargar o utilizar online</p>
+    <p>Modo online hay que añadir las siguientes líneas de código en el documento HTML</p>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+                ...
+                &lt;link href="https://{{cdn}}/prismjs@v1.x/themes/prism.css" rel="stylesheet" /&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                ...
+                &lt;script src="https://{{cdn}}/prismjs@v1.x/components/prism-core.min.js">&lt;/script&gt;
+                &lt;script src="https://{{cdn}}/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"&gt;&lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+    <p>Si se quiere tener los archivos a ejecutar, se puede descargar:</p>
+    <ol>
+        <li>Se selecciona el tema y los lenguajes a resaltar</li>
+        <li>Se añade el archivo <span class="ubuntu-bold">CSS</span> y <span class="ubuntu-bold">JS</span> al HTML</p></li>
+        <li>Se añade a la etiqueta <span class="ubuntu-regular-italic">code</span> la clase con lenguaje a resaltar</li>
+    </ol>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;code class="language-HTML"&gt;Texto HTML resaltado&lt;/code&gt;
+        </code>
+    </pre>
+    <p>La página de <span class="ubuntu-regular-italic">Prism</span> indica que la clase es <span class="ubuntu-bold">languague-xxxx</span>, donde XXXX es el lenguaje y nos dice como nombrarlos. Por ejemplo: <span class="ubuntu-mono-regular">html</span>, <span class="ubuntu-mono-regular">css</span>, <span class="ubuntu-mono-regular">javascript</span> o <span class="ubuntu-mono-regular">js.</span> </p>
+    <img src="./img/supportedLanguages.png" alt="Captura de pantalla donde se muestra como nombrar las clases para que funcione el resaltado de sintáxis">
+    
+    <br><br>
+    <a href="https://lenguajehtml.com/html/agrupacion/etiqueta-html-pre/">Pista de Manz</a>
+    <p>Artículos leidos para saber donde posicionar la etiqueta <span class="ubuntu-bold">script</span></p>
+    <ul>
+        <li><a href="https://lenguajejs.com/javascript/introduccion/como-funciona/">Como cargar un archivo de JS</a></li>
+        <li><a href="https://lenguajehtml.com/html/scripting/etiqueta-html-script/">Etiqueta Script</a></li>
+        <li><a href="https://lenguajehtml.com/html/scripting/atributo-defer-async/">Atributos defer y async</a></li>
+    </ul>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>

@@ -1,5 +1,6 @@
 
 @import url('fonts.css');
+@import url('prism.css');
 
 body{
     background-color:#42474a;
