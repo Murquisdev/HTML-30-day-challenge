@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 15</title>
+    <meta name="description" content="Solución del reto del Día 15 del HTML-30-day-challenge de ManzDev. Crea una página con un video MP4 (no de youtube), que muestre una imagen de portada antes de darle a reproducir..">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <h1>Día 15</h1>
+    <h2>Crea una página con un video MP4 (no de youtube), que muestre una imagen de portada antes de darle a reproducir..</h2>
+    <video src="./mult/video.mp4" width="1280" height="720" controls playsinline preload="metadata" poster="./mult/imagenPortada.jpg"></video>
+    <p>La etiqueta <span class="ubuntu-bold">video</span> nos permite reproducir video en el navegador web. Tiene los siguientes atributos</p>
+    <ul>
+        <li><span class="ubuntu-bold">src</span>: Archivo o URL del video.</li>
+        <li><span class="ubuntu-bold">width</span>: Ancho del vídeo</li>
+        <li><span class="ubuntu-bold">height</span>: Alto del video.</li>
+    </ul>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;video src="./mult/video.mp4" width="1280" height="720"&gt;&lt;/video&gt;
+        </code>
+    </pre>
+    <p>También dispone de unos atributos de control <span class="ubuntu-bold">booleanos</span>, se activan cuando se ponen en la etiqueta:</p>
+    <ul>
+        <li><span class="ubuntu-bold">autoplay</span>: Comienza a reproducir el video automáticamente. Está sujeto a normas del navegador.</li>
+        <li><span class="ubuntu-bold">loop</span>: Vuelve a iniciar el video cuando finaliza su reproducción (en bucle).</li>
+        <li><span class="ubuntu-bold">muted</span>: Establece que el video se reproduzca con sonido silenciado.</li>
+        <li><span class="ubuntu-bold">controls</span>: Muestra los controles de reproducción (por defecto no se muestran).</li>
+        <li><span class="ubuntu-bold">playsinline</span>: Reproduce el video en línea, es decir, en su área de reproducción.</li>
+    </ul>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;video src="./mult/video.mp4" width="1280" height="720" loop controls playsinline&gt;&lt;/video&gt;
+        </code>
+    </pre>
+    <p>Además tiene unos atributos de precargar:</p>
+    <ul>
+        <li><span class="ubuntu-bold">poster</span>: Funciona como el atributo <span class="ubuntu-regular-italic">src</span> y sirve para indicar la dirección de la imagen a mostrar antes de cargar el video.</li>
+        <li><span class="ubuntu-bold">preload</span>: Indicamos como se realiza la carga del video</li>
+        <ul>
+            <li><span class="ubuntu-bold">auto</span>: Por defecto, el navegador decide si descarga el video de forma anticipada o no</li>
+            <li><span class="ubuntu-bold">none</span>: Se descarga al hacer click</li>
+            <li><span class="ubuntu-bold">metada</span>: Descarga los metadatos pero no el video</li>
+        </ul>
+    </ul>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;video src="./mult/video.mp4" width="1280" height="720" loop controls playsinline preload="metadata" poster="./mult/imagenPortada.mp4"&gt;&lt;/video&gt;
+        </code>
+    </pre>
+    <p>La etiqueta <span class="ubuntu-regular-italic">video</span> necesita una etiqueta de cierre porque se puede utilizar como la etiqueta <span class="ubuntu-regular-italic">picture</span>, se puede hacer un fallback.</p>
+    <p>Incluso se le puede añadir una etiqueta <span class="ubuntu-bold">img</span> para que carge una imagen si no se puede mostrar los videos.</p>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;video width="640" height="480"&gt;
+                &lt;source src="video.mp4" type="video/mp4" /&gt;
+                &lt;source src="video.webm" type="video/webm" /&gt;
+                &lt;source src="video.ogv" type="video/ogg" /&gt;
+                &lt;img src="imagen.png" alt="Video no soportado" /&gt;
+                Su navegador no soporta contenido multimedia.
+            &lt;/video&gt;
+        </code>
+    </pre>
+    <p>Por último se pueden utilizar los <span class="ubuntu-regular-italic"><a href="https://www.w3.org/TR/media-frags/">fragmentos multimedia</a></span> para indicar el segundo en el que empieza un vídeo e incluso el segundo donde acaba.</p>
+    <ul>
+        <li><span class="ubuntu-bold">src="video.mp4#t=15"</span>: Al añadir <span class="ubuntu-regular-italic">#t=15</span> indicamos que el video comienza en el segundo 15.</li>
+        <li><span class="ubuntu-bold">src="video.mp4#t=10,20"</span>: Al añadir <span class="ubuntu-regular-italic">#t=10,20</span> indicamos que el video comienza en el segundo 10 y termina el 20.</li>
+    </ul>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;video src="./mult/video.mp4#t=10,50" width="1280" height="720" loop controls playsinline preload="metadata" poster="./mult/imagenPortada.mp4"&gt;&lt;/video&gt;
+        </code>
+    </pre>
+    
+
+
+	
+
+	
+
+	
+
+	
+    
+    <a href="https://lenguajehtml.com/html/multimedia/etiqueta-html-video/">Pista de Manz</a>
+    <p>Artículos leidos:</p>
+    <ul>
+        <li><a href="https://lenguajehtml.com/html/multimedia/formatos-multimedia/">Formatos multimedia</a></li>
+    </ul>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+@import url('fonts.css');
+@import url('prism.css');
+
+body{
+    background-color:#42474a;
+    color: #f6dab6;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+a{
+    color:whitesmoke;
+}
+video{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.3) 4px 4px;
+}
