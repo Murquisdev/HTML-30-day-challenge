@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 17</title>
+    <meta name="description" content="Solución del reto del Día 17 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una card de usuario: username como título, un avatar de imagen, edad, país, nacimiento y enlace a su web.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <h1>Día 17 - Murquisdev</h1>
+    <h2>Crea una card de usuario: username como título, un avatar de imagen, edad, país, nacimiento y enlace a su web.</h2>
+    <p>Las etiquetas en HTML tienen diferentes usos, a nivel de documentos, agrupaciones, formularios, tablas...</p>
+    <p>Hay una serie de etiquetas HTML que se consideran de tipo <span class="ubuntu-bold">semánticas</span></p>
+    <p>Estas etiquetas semánticas existen a nivel de texto y a nivel de agrupaciones y sirven para dar contexto a los buscadores y al utilizarlas conseguiremos mejorar el posicionamiento.</p>
+    <br>
+    <p>Por otro lado a la hora de "maquetar" la web se suele utilizar solo la etiqueta <span class="ubuntu-bold">div</span> creando algo como el ejemplo siguiente:</p>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;div class="articulo"&gt;
+                &lt;h1&gt;Título del artículo&lt;/h1&gt;
+                &lt;p class="introduccion"&gt;Pequeña introducción.&lt;/p&gt;
+                &lt;p class="contenido"&gt;Aquí va el texto del artículo en cuestión con sus detalles.&lt;/p&gt;
+                &lt;p class="pie"&gt;Escrito por Manz&lt;/p&gt;
+              &lt;/div&gt;
+        </code>
+    </pre>
+    <p>Este ejemplo cumple con los requisitos que necesitamos, pero no es semánticamente correcto, con lo que se podría sustituir de la siguiente forma:</p>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;article&gt;
+                &lt;header&gt;
+                  &lt;h1&gt;Título del artículo&lt;/h1&gt;
+                  &lt;p class="abstract"&gt;Pequeña introducción.&lt;/p&gt;
+                &lt;/header&gt;
+                &lt;p class="content"&gt;Aquí va el texto del artículo en cuestión con sus detalles.&lt;/p&gt;
+                &lt;footer&gt;
+                  &lt;p&gt;Escrito por Manz.&lt;/p&gt;
+                &lt;/footer&gt;
+              &lt;/article&gt;
+        </code>
+    </pre>
+    <p>Aquí indicamos que es un artículo independiente, tiene un título, un contenido y pie, separando todo semánticamente</p>
+    <p><span class="ubuntu-bold">- ¡CUIDADO!</span> Aunque existe la etiqueta <span class="ubuntu-bold">main</span> para indicar el contenido principal, solo debe aparecer <span class="ubuntu-bold">UNA VEZ</span> en todo el documento</p>
+    <article class="card">
+        <header>
+            <h1>Murquisdev</h1>
+        </header>
+        <div class="content">
+            <img src="./img/avatar.jpg" alt="avatar" width="72" height="72">
+            <p>Pais: 🇪🇸 España</p>
+            <p>Padawan del desarrollo web</p>
+        </div>
+        <footer>
+            <a href="https://github.com/Murquisdev"><img src="./img/github-mark-white.svg" alt="Enlace al github de Murquisdev" width="48" height="48"></a>
+        </footer>
+    </article>
+
+    <br><br>
+    <a href="https://lenguajehtml.com/html/introduccion/tabla-periodica-html5/">Pista de Manz</a>
+    <p>Artículos leidos:</p>
+    <ul>
+        <li><a href="https://lenguajehtml.com/html/semantica/que-son/">Etiquetas semánticas que son. (7 artículos)</a></li>
+    </ul>
+  
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>
