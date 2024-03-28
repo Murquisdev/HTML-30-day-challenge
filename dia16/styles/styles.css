@@ -1,0 +1,42 @@
+
+@import url('fonts.css');
+@import url('prism.css');
+
+body{
+    background-color:#42474a;
+    color: #f6dab6;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+a{
+    color:whitesmoke;
+}
+.keyboard{
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    padding: 4px 8px;
+    border: 3px solid rgb(29, 29, 29);
+    border-top-width: 1px;
+    border-bottom: 3px solid rgb(15, 15, 15);
+    border-radius: 4px;
+}
+.keyboard:hover{
+    cursor: pointer;
+    border: 3px solid rgb(29, 29, 29);
+    border-bottom-width: 1px;
+    border-top: 3px solid rgb(15, 15, 15);
+    background-color: #1e2122;
+}
+.msgError{
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    color:rgb(238, 92, 92)
+}

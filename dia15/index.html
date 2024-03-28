@@ -39,12 +39,14 @@
     <p>Además tiene unos atributos de precargar:</p>
     <ul>
         <li><span class="ubuntu-bold">poster</span>: Funciona como el atributo <span class="ubuntu-regular-italic">src</span> y sirve para indicar la dirección de la imagen a mostrar antes de cargar el video.</li>
-        <li><span class="ubuntu-bold">preload</span>: Indicamos como se realiza la carga del video</li>
-        <ul>
-            <li><span class="ubuntu-bold">auto</span>: Por defecto, el navegador decide si descarga el video de forma anticipada o no</li>
-            <li><span class="ubuntu-bold">none</span>: Se descarga al hacer click</li>
-            <li><span class="ubuntu-bold">metada</span>: Descarga los metadatos pero no el video</li>
-        </ul>
+        <li>
+            <span class="ubuntu-bold">preload</span>: Indicamos como se realiza la carga del video
+            <ul>
+                <li><span class="ubuntu-bold">auto</span>: Por defecto, el navegador decide si descarga el video de forma anticipada o no</li>
+                <li><span class="ubuntu-bold">none</span>: Se descarga al hacer click</li>
+                <li><span class="ubuntu-bold">metada</span>: Descarga los metadatos pero no el video</li>
+            </ul>
+        </li>
     </ul>
     <pre class="ubuntu-mono-regular">
         <code class="language-html">
@@ -74,17 +76,7 @@
             &lt;video src="./mult/video.mp4#t=10,50" width="1280" height="720" loop controls playsinline preload="metadata" poster="./mult/imagenPortada.mp4"&gt;&lt;/video&gt;
         </code>
     </pre>
-    
-
-
-	
-
-	
-
-	
-
-	
-    
+    <br><br>
     <a href="https://lenguajehtml.com/html/multimedia/etiqueta-html-video/">Pista de Manz</a>
     <p>Artículos leidos:</p>
     <ul>

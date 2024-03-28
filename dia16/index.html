@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 16</title>
+    <meta name="description" content="Solución del reto del Día 16 del HTML-30-day-challenge de ManzDev por Murquisdev. Muestra un texto con el atajo de teclado CTRL+ALT+SUPR y dale estilo para que parezcan teclas.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <h1>Día 16 - Murquisdev</h1>
+    <h2>Muestra un texto con el atajo de teclado CTRL+ALT+SUPR y dale estilo para que parezcan teclas.</h2>
+    <p>HTML tiene dos etiquetas para indicar la entrada y salida de datos:</p>
+    <ul>
+        <li><span class="ubuntu-bold">kbd</span>: Se utiliza para indicar la entrada de datos por parte del usuario (keyboard / teclado)</li>
+        <li><span class="ubuntu-bold">samp</span>: Se utiliza para indicar la salida de datos, es decir, la respuesta de la máquina</li>
+    </ul>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;p&gt;Para abrir el administrador de tareas en Windows presione &lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;ALT&lt;/kbd&gt;+&lt;kbd&gt;SUP&lt;/kbd&gt;&lt;/p&gt;
+            &lt;p&gt;El administrador de tareas devolvió el mensaje: &lt;samp&gt;No se ha podido finalizar la tarea&lt;/samp&gt;&lt;/p&gt;
+        </code>
+    </pre>
+    <p>Para abrir el administrador de tareas en Windows presione <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>SUP</kbd></p>
+    <p>El administrador de tareas devolvió el mensaje: <samp>No se ha podido finalizar la tarea</samp></p>
+    <br>
+    <p>Y como siempre podemos modificar el CSS para darle forma de teclas, cambiar colores, etc.</p>
+    <p>Para abrir el administrador de tareas en Windows presione <kbd class="keyboard">CTRL</kbd>+<kbd class="keyboard">ALT</kbd>+<kbd class="keyboard">SUP</kbd></p>
+    <p>El administrador de tareas devolvió el mensaje: <samp class="msgError">El administrador de tareas no responde</samp></p>
+    <img src="./img/elElegido.jpg" alt="Meme de Obi-Wan lamentandose que el administrador de tareas se una al lado oscuro de la fuerza" width="700" height="700">
+    <br><br>
+    <a href="https://lenguajehtml.com/html/texto/etiqueta-html-kbd-samp/">Pista de Manz</a>
+  
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+</body>
+</html>

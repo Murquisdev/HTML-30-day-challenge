@@ -22,8 +22,8 @@ Repositorio para realizar los retos propuestos de **HTML** por [Manzdev](https:/
 | 12 | Crea un slider que permita seleccionar un número entre 1-50 y lo muestre en vivo al cambiar.                          | 📁 [12/](/dia12/) |[Día 12](https://murquisdev.github.io/HTML-30-day-challenge/dia12/index.html) |
 | 13 | Crea una barra medidora que muestre los tickets vendidos en un cine (64/100 tickets vendidos).                        | 📁 [13/](/dia13/) |[Día 13](https://murquisdev.github.io/HTML-30-day-challenge/dia13/index.html) |
 | 14 | Muestra un bloque de fragmento de código CSS en una página (sin resaltado de colores).                                | 📁 [14/](/dia14/) |[Día 14](https://murquisdev.github.io/HTML-30-day-challenge/dia14/index.html) |
-| 15 | Crea una página con un video MP4, que muestre una portada antes de darle a reproducir.                                | 📁 [15/](/dia15/) |[Día 15](https://murquisdev.github.io/HTML-30-day-challenge/dia15/index.html) |               |
-| 16 | Muestra un texto con el atajo de teclado CTRL+ALT+SUPR y dale estilo para que parezcan teclas.                        |                |
+| 15 | Crea una página con un video MP4, que muestre una portada antes de darle a reproducir.                                | 📁 [15/](/dia15/) |[Día 15](https://murquisdev.github.io/HTML-30-day-challenge/dia15/index.html) |
+| 16 | Muestra un texto con el atajo de teclado CTRL+ALT+SUPR y dale estilo para que parezcan teclas.                        | 📁 [16/](/dia16/) |[Día 16](https://murquisdev.github.io/HTML-30-day-challenge/dia16/index.html) |
 | 17 | Crea una card de usuario: username como título, un avatar, edad, país, nacimiento y enlace a su web.                  |                |
 | 18 | Crea un pequeño artículo de prensa con una noticia inventada. Usa etiquetas HTML semánticas.                          |                |
 | 19 | Crea una tabla con información. Incluye una cabecera y un pie de tabla. La última columna será de un color diferente. |                |
