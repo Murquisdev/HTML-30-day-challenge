@@ -52,6 +52,10 @@ kbd{
     border-top-width: 1px;
     border-bottom: 3px solid rgb(15, 15, 15);
     border-radius: 4px;
+    transition: border 0.3s ease-in-out, 
+                border-bottom-width 0.3s ease-in-out, 
+                border-top 0.3s ease-in-out,
+                background-color 0.3s ease-in-out;
 }
 kbd:hover{
     cursor: pointer;
@@ -71,7 +75,7 @@ kbd:hover{
     padding: 8px 8px;
     margin: 8px auto;
     border-radius: 8px;
-    height: 264px;
+    height: 280px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     background-color: #212425;
