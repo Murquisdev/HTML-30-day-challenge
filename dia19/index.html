@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Día 19</title>
-    <meta name="description" content="Solución del reto del Día 19 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una tabla con información. Incluye una cabecera y un pie de tabla. La última columna será de un color diferente..">
+    <meta name="description" content="Solución del reto del Día 19 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una tabla con información. Incluye una cabecera y un pie de tabla. La última columna será de un color diferente.">
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="./js/prism.js" defer></script>
 </head>
@@ -26,21 +26,21 @@
                 &lt;table&gt;
                     &lt;!-- Fila de la cabecera --&gt;
                     &lt;tr&gt;
-                    &lt;th&gt;Título columna 1&lt;/th&gt; &lt;!-- Celda cabecera de la columna 1 --&gt;
-                    &lt;th&gt;Título columna 2&lt;/th&gt; &lt;!-- Celda cabecera de la columna 2 --&gt;
-                    &lt;th&gt;Título columna 3&lt;/th&gt; &lt;!-- Celda cabecera de la columna 3 --&gt;
+                        &lt;th&gt;Título columna 1&lt;/th&gt; &lt;!-- Celda cabecera de la columna 1 --&gt;
+                        &lt;th&gt;Título columna 2&lt;/th&gt; &lt;!-- Celda cabecera de la columna 2 --&gt;
+                        &lt;th&gt;Título columna 3&lt;/th&gt; &lt;!-- Celda cabecera de la columna 3 --&gt;
                     &lt;/tr&gt;
                     &lt;!-- Primera fila --&gt;
                     &lt;tr&gt;
-                    &lt;td&gt;Celda 1x1&lt;/td&gt; &lt;!-- Primera celda de la primera fila --&gt;
-                    &lt;td&gt;Celda 2x1&lt;/td&gt; &lt;!-- Segunda celda de la primera fila --&gt;
-                    &lt;td&gt;Celda 3x1&lt;/td&gt; &lt;!-- Tercera celda de la primera fila --&gt;
+                        &lt;td&gt;Celda 1x1&lt;/td&gt; &lt;!-- Primera celda de la primera fila --&gt;
+                        &lt;td&gt;Celda 2x1&lt;/td&gt; &lt;!-- Segunda celda de la primera fila --&gt;
+                        &lt;td&gt;Celda 3x1&lt;/td&gt; &lt;!-- Tercera celda de la primera fila --&gt;
                     &lt;/tr&gt;
                     &lt;!-- Segunda fila --&gt;
                     &lt;tr&gt;
-                    &lt;td&gt;Celda 1x2&lt;/td&gt; &lt;!-- Primera celda de la segunda fila --&gt;
-                    &lt;td&gt;Celda 2x2&lt;/td&gt; &lt;!-- Segunda celda de la segunda fila --&gt;
-                    &lt;td&gt;Celda 3x2&lt;/td&gt; &lt;!-- Tercera celda de la segunda fila --&gt;
+                        &lt;td&gt;Celda 1x2&lt;/td&gt; &lt;!-- Primera celda de la segunda fila --&gt;
+                        &lt;td&gt;Celda 2x2&lt;/td&gt; &lt;!-- Segunda celda de la segunda fila --&gt;
+                        &lt;td&gt;Celda 3x2&lt;/td&gt; &lt;!-- Tercera celda de la segunda fila --&gt;
                     &lt;/tr&gt;
                 &lt;/table&gt;
             </code>
@@ -52,14 +52,16 @@
             <li><span class="ubuntu-bold">tfoot</span>: Etiqueta contenedora del pie de la tabla</li>
             <li><span class="ubuntu-bold">caption</span>: Establece un título a la tabla</li>
         </ul>
-        <p>Con lo que el siguiente código se verá de la siguiente forma</p>
+        <p>Con lo que si hacemos el siguiente código:</p>
         <pre class="ubuntu-mono-regular">
         <code class="language-html">
             &lt;table&gt;
                 &lt;caption&gt;Título de la tabla&lt;/caption&gt;
                 &lt;thead&gt;
-                    &lt;th&gt;Titulo 1&lt;/th&gt;
-                    &lt;th&gt;Título 2&lt;/th&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Titulo 1&lt;/th&gt;
+                        &lt;th&gt;Título 2&lt;/th&gt;
+                    &lt;/tr&gt;
                 &lt;/thead&gt;
                 &lt;tbody&gt;
                     &lt;tr&gt;
@@ -85,7 +87,7 @@
         </code>
         </pre>
         <p>La posición del título se puede modificar con la propiedad <span class="ubuntu-bold">caption-side</span></p>
-        <p>Y añadiendo unos estilos a la tabla:</p>
+        <p>Y añadimosunos estilos a la tabla:</p>
         <pre class="ubuntu-mono-regular">
             <code class="language-css">
                 table{
@@ -112,12 +114,15 @@
                     padding: 8px;
                 }
             </code>
-            </pre>
+        </pre>
+        <p>Este es el resultado</p>
         <table>
             <caption>Título de la tabla</caption>
             <thead>
-                <th>Titulo 1</th>
-                <th>Título 2</th>
+                <tr>
+                    <th>Titulo 1</th>
+                    <th>Título 2</th>
+                </tr>
             </thead>
             <tbody>
                 <tr>

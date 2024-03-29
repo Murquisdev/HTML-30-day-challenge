@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 20</title>
+    <meta name="description" content="Solución del reto del Día 20 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea un formulario para dejar un comentario en una página: Usuario y comentario de texto">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 20 - Murquisdev</h1>
+        <h2>Crea un formulario para dejar un comentario en una página: Usuario y comentario de texto</h2>
+    </header>
+    <main>
+        <p>Este reto conlleva conocer 3 etiquetas, <span class="ubuntu-bold">form</span>, <span class="ubuntu-bold">input</span> y <span class="ubuntu-bold">textarea</span></p>
+        <ul>
+            <li><span class="ubuntu-bold">form</span>: Etiqueta contenedora del formulario</li>
+            <li><span class="ubuntu-bold">input</span>: Etiqueta para obtener datos del usuario</li>
+            <li><span class="ubuntu-bold">texarea</span>: Igual que input, pero se utiliza para escribir textos extensos</li>
+        </ul>
+        <form method="post" action="#" name="comments">
+            <div>
+                <input type="text" name="username" placeholder="Nombre de usuario" autofocus>
+            </div>
+            <textarea name="comment" cols="30" rows="10" placeholder="Escriba su comentario"></textarea>
+            <div>
+                <input type="submit" value="Enviar comentario">
+            </div>
+        </form>
+        <h3><a href="https://lenguajehtml.com/html/formularios/etiqueta-html-form/">FORM</a></h3>
+        <p>Un formulario es el mecanismo que utiliza un usuario para enviar información. Tiene los siguientes atributos</p>
+        <ul>
+            <li><span class="ubuntu-bold">action</span>: Dirección URL del backend al cuál se enviará la información obtenida en el formulario.</li>
+            <li><span class="ubuntu-bold">method</span>: Método HTTP de envío. GET a través de URL, POST para envío extenso de información.</li>
+            <li><span class="ubuntu-bold">name</span>: Nombre del formulario. Útil para identificar el formulario y procesar posteriormente.</li>
+            <li><span class="ubuntu-bold">target</span>: Nombre del lugar donde se abrirá el formulario. \_blank para nueva pestaña.</li>
+            <li><span class="ubuntu-bold">enctype</span>: Codificación para el envío del formulario. <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-file/">Importante para envío de archivos.</a></li>
+            <li><span class="ubuntu-bold">accept-charset</span>: Fuerza a utilizar una codificación en los parámetros de texto del formulario.</li>
+            <li><span class="ubuntu-bold">autocomplete</span>: Nombre del lugar donde se abrirá el formulario. \_blank para nueva pestaña.</li>
+            <li><span class="ubuntu-bold">novalidate</span>: Desactiva la validación HTML5 del formulario.</li>
+        </ul>
+        <p>Esto solo nos indica como es el contendor del formulario, para que el usuario pueda introducir los datos se utlizan las siguientes etiquetas:</p>
+        <ul>
+            <li><span class="ubuntu-bold">&lt;input&gt;</span>: Información de texto corto. Nombres, apellidos, textos cortos... </li>
+            <li><span class="ubuntu-bold">&lt;textarea&gt;</span>: Información de texto largo. Comentarios, observaciones...</li>
+            <li><span class="ubuntu-bold">&lt;input type="number"&gt; ó &lt;input type="range"&gt;</span>: Números o cantidades. Edades, precios, cuantías..</li>
+            <li><span class="ubuntu-bold">&lt;input type="date"&gt; o derivados</span>: Fechas u horas. Fecha de nacimiento, inicio de evento... </li>
+            <li><span class="ubuntu-bold">&lt;input type="checkbox"&gt;</span>: Verdadero/falso. Si/No, Opción A/B, ON/OFF...</li>
+            <li><span class="ubuntu-bold">&lt;input type="radio"&gt; ó &lt;select&gt;</span>: Opción única (Elegir una opción de 2 ó más posibles) </li>
+            <li><span class="ubuntu-bold">&lt;select multiple&gt; ó &lt;input type="checkbox"&gt;</span>: Varias opciones (Elegir varias opciones de 2 ó más posibles)</li>
+            <li><span class="ubuntu-bold">&lt;datalist&gt;</span>: Opción única abierta (Elegir una opción o indicar una propia)</li>
+            <li><span class="ubuntu-bold">&lt;input type="color"&gt;</span>: Selección de color (Escoger un color o tonalidad)</li>
+            <li><span class="ubuntu-bold">&lt;input type="file"&gt;</span>: Selección de archivo (Escoger un archivo para enviar)</li>
+        </ul>
+        <p>Con lo que un formulario básico quedaría de la siguiente forma:</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;form name="userdata" method="post" action="/send/"&gt;
+                    &lt;input type="text" name="username"&gt;
+                    &lt;input type="textarea" name="comment"&gt;
+                    &lt;input type="submit"&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>Este formulario utilizará el método post (envío de información "oculta") a la dirección dominio_utilizado/send y tiene el nombre de userdata para poder procesarlo.</p>
+        <p>El <span class="ubuntu-regular-italic">input</span> de tipo <span class="ubuntu-bold">texto</span> lo utilizamos para el nombre del usuario</p>
+        <p>El <span class="ubuntu-regular-italic">input</span> de tipo <span class="ubuntu-bold">texarea</span> lo utilizamos para introducir el comentario</p>
+        <p>El <span class="ubuntu-regular-italic">input</span> de tipo <span class="ubuntu-bold">submit</span> sirve para enviar la información, funciona como un botón</p>
+        <h3><a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input/">INPUT</a></h3>
+        <p>La etiqueta <span class="ubuntu-bold">input</span> no tiene etiqueta de cierre y tiene muchos atributos:</p>
+        <ul>
+            <li><span class="ubuntu-bold">name</span>: Indica el nombre del campo. Útil para hacer referencia a la información almacenada.</li>
+            <li><span class="ubuntu-bold">type</span>: Indica la naturaleza de datos que se espera del usuario (texto, número, fechas, etc...).</li>
+            <li><span class="ubuntu-bold">value</span>: Indica el valor inicial que tendrá este campo de datos. Si se omite, está vacío.</li>
+            <li><span class="ubuntu-bold">form</span>: Asocia este campo con un formulario específico. Útil si necesitamos tenerlo fuera del &lt;form&gt;.</li>
+            <li><span class="ubuntu-bold">list</span>: En algunos &lt;input&gt; permite combinar con otra etiqueta para personalizarla.</li>
+            <li><span class="ubuntu-bold">placeholder</span>: Indica una sugerencia al usuario antes de escribir el valor en el campo.</li>
+            <li><span class="ubuntu-bold">size</span>: Tamaño visual (aprox: número de carácteres) del campo de datos.</li>
+            <li><span class="ubuntu-bold">autocomplete</span>: Activa on o desactiva off el autocompletado para este campo. Activado por defecto.</li>
+            <li><span class="ubuntu-bold">autofocus</span>: Establece el foco (coloca el cursor) en este campo al cargar la página.</li>
+        </ul>
+        <p>A su vez el atributo <span class="ubuntu-regular-italic">type</span> puede tener los siguientes valores para indicar el tipo de dato a introducir</p>
+        <ul>
+            <li><span class="ubuntu-bold">text</span>: Texto alfanumérico. (Por defecto)</li>
+            <li><span class="ubuntu-bold">number</span>: Solo permite números</li>
+            <li><span class="ubuntu-bold">search</span>: Texto para búsquedas</li>
+            <li><span class="ubuntu-bold">tel</span>: Números de teléfono</li>
+            <li><span class="ubuntu-bold">url</span>: Direcciones urls</li>
+            <li><span class="ubuntu-bold">mail</span>: Emails</li>
+            <li><span class="ubuntu-bold">password</span>: Oculta en la PANTALLA lo que se escribe.</li>
+            <li><span class="ubuntu-bold">hidden</span>: No se muestra este input</li>
+        </ul>
+        <p>El tipo de <span class="ubuntu-regular-italic">input</span> además de permitir al navegador hacer pequeñas validaciones, cambia el teclado que muestra si se rellena desde un móvil/tablet.</p>
+        <h3><a href="https://lenguajehtml.com/html/formularios/etiqueta-html-textarea/">TEXTAREA</a></h3>
+        <p>Hay tres atributos a destacar:</p>
+        <ul>
+            <li><span class="ubuntu-bold">cols</span>:Número de carácteres que caben en horizontal (columnas).</li>
+            <li><span class="ubuntu-bold">rows</span>: Número de carácteres que caben en vertical (filas).</li>
+            <li><span class="ubuntu-bold">wrap</span>: Con <span class="ubuntu-regular-italic">soft</span> (por defecto) o <span class="ubuntu-regular-italic">hard</span> puedes indicar si el texto debe enviarse ajustado o tal cuál se escribió.</li>
+        </ul>
+        <p>Se puede indicar el tamaño del <span class="ubuntu-regular-italic">texarea</span> desde HTML o CSS (con <span class="ubuntu-regular-italic">width</span> y <span class="ubuntu-regular-italic">heigth</span>) e incluso en ocasiones interesará hacerlo con ambos</p>
+        <p><span class="ubuntu-regular-italic">Wrap</span> nos permite decidir como enviar la información al servidor.</p>
+        <ul>
+            <li><span class="ubuntu-bold">soft</span>: Enviará el texto literalmente (por defecto)</li>
+            <li><span class="ubuntu-bold">hard</span>: Ajustará el texto como se ve exactamente en el <span class="ubuntu-regular-italic">textarea</span> y añadirá saltos de líneas (\n)</li>
+        </ul>
+        <p>Si el texto es demasiado grande, aparecerán barras de scroll, pero esto se puede evitar con la propiedad CSS <span class="ubuntu-bold">field-sizing</span></p>
+        <ul>
+            <li><span class="ubuntu-bold">fixed</span>: Tamaño fijo (valor por defecto)</li>
+            <li><span class="ubuntu-bold">content</span>: Tamaño crece a medida que el contenido aumenta</li>
+        </ul>
+        <p>Por último, es interesante la propiedad CSS <span class="ubuntu-bold">resize: none</span> que impide al usuario ampliar el área de texto</p>
+         	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+        
+        	
+         	
+        
+        	
+        
+        	
+        	
+        	
+        
+        	
+ 	
+ 	 	
+ 	 	
+ 	
+
+
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-textarea/">Pista de Manz</a>
+        <p>Artículos leidos:</p>
+        <ul>
+            <li><a href="https://lenguajehtml.com/html/formularios/etiqueta-html-form/">Etiqueta FORM</a></li>
+            <li><a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input/">Etiqueta input</a></li>
+        </ul>
+        <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>

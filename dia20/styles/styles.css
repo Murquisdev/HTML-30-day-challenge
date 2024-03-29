@@ -1,0 +1,46 @@
+
+@import url('fonts.css');
+@import url('prism.css');
+
+body{
+    background-color:#42474a;
+    color: #f6dab6;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.4;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+a{
+    color:whitesmoke;
+}
+form{
+    margin-left: 12px;
+}
+input{
+    padding: 8px;
+    background-color: #212425;
+    color: #f6dab6;
+}
+input::placeholder{
+    color: #f6dab6b2;
+}
+input[type="text"]{
+    margin-bottom: 8px;
+}
+textarea{
+    padding: 8px;
+    background-color: #212425;
+    color: #f6dab6;
+    margin-bottom: 8px;
+    resize: none;
+}
+textarea::placeholder{
+    color: #f6dab6b2;
+}
