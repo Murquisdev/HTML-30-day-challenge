@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 21</title>
+    <meta name="description" content="Solución del reto del Día 21 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una lista desplegable donde se pueda seleccionar entre 3 grupos de productos ficticios.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 21 - Murquisdev</h1>
+        <h2>Crea una lista desplegable donde se pueda seleccionar entre 3 grupos de productos ficticios.</h2>
+    </header>
+    <main>
+        <form class="form-food" method="post" action="#" name="food">
+            Seleciona los ingredientes:
+            <select name="foodSelect" multiple>
+                <optgroup label="Vegetales">
+                    <option value="cebolla">Cebolla</option>
+                    <option value="lechuga">Lechuga</option>
+                    <option value="pepinillos">Pepinillos</option>
+                </optgroup>
+                <optgroup label="Carne">
+                    <option value="ternera">Ternera</option>
+                    <option value="pollo">Pollo</option>
+                    <option value="cerdo">Cerdo</option>
+                </optgroup>
+                <optgroup label="Complementos">
+                    <option value="bacon">Bacon</option>
+                    <option value="queso">Queso</option>
+                    <option value="barbacoa">Salsa barbacoa</option>
+                </optgroup>
+            </select>
+            <input type="submit">
+        </form>
+        <p>Cuando tenemos demasiadas opciones entre las que escoger, se suele utilizar una <span class="ubuntu-regular-italic">lista desplegable</span>, para ello utlizamos la etiqueta <span class="ubuntu-bold">select</span>.
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;form method="post" action="/send/"&gt;
+                    Selecciona la opción deseada:
+                    &lt;select&gt;
+                        &lt;option value="1"&gt;Opción 1&lt;/option&gt;
+                        &lt;option value="2" selected&gt;Opción 2&lt;/option&gt;
+                        &lt;option value="3"&gt;Opción 3&lt;/option&gt;
+                    &lt;/select&gt;
+                  &lt;/form&gt;
+            </code>
+        </pre>
+        <form method="post" action="/send/">
+            Selecciona la opción deseada:
+            <select>
+                <option value="1">Opción 1</option>
+                <option value="2" selected>Opción 2</option>
+                <option value="3">Opción 3</option>
+            </select>
+          </form>
+        <p>Cada opción se pone con la etiqueta <span class="ubuntu-bold">option</span></p>
+        <p>Si queremos que una opción salga <span class="ubuntu-bold">seleccionada</span> por defecto, se utliza el atribuo <span class="ubuntu-bold">selected</span></p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;form method="post" action="/send/"&gt;
+                    Selecciona la opción deseada:
+                    &lt;select&gt;
+                        &lt;option value="1" disabled selected&gt;-Elige una opción-&lt;/option&gt;
+                        &lt;option value="1"&gt;Opción 1&lt;/option&gt;
+                        &lt;option value="2" &gt;Opción 2&lt;/option&gt;
+                        &lt;option value="3"&gt;Opción 3&lt;/option&gt;
+                        &lt;option value="4"&gt;Opción 4&lt;/option&gt;
+                        &lt;option value="5"&gt;Opción 5&lt;/option&gt;
+                    &lt;/select&gt;
+                  &lt;/form&gt;
+            </code>
+        </pre>
+        <form method="post" action="/send/">
+            Selecciona la opción deseada:
+            <select>
+                <option value="1" disabled selected>-Elige una opción-</option>
+                <option value="1">Opción 1</option>
+                <option value="2" >Opción 2</option>
+                <option value="3">Opción 3</option>
+                <option value="4">Opción 4</option>
+                <option value="5">Opción 5</option>
+            </select>
+          </form>
+        <p>Puede ser interesante usar el atributo <span class="ubuntu-bold">disable</span> para usar una opción como <span class="ubuntu-regular-italic">placeholder</span>.</p>
+        <p>Pero hay que tener cuidado, puesto al estar inicialmente seleccionada para mostrarla, no cumplirá con la restricción del formulario, porque hay algo seleccionado.</p>
+
+        <h3>Grupos de opciones</h3>
+        <p>Se pueden crear grupos de opciones y separarlos con las siguientes etiquetas:</p>
+        <ul>
+            <li><span class="ubuntu-bold">hr</span>: Muestra una línea dentro de la selección.</li>
+            <li><span class="ubuntu-bold">optgroup</span>: Agrupa las opciones por grupos</li>
+        </ul>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;form method="post" action="/send/"&gt;
+                    Selecciona la opción deseada:
+                    &lt;select&gt;
+                      &lt;optgroup label="Categoría 1"&gt;
+                        &lt;option value="1"&gt;Opción 1&lt;/option&gt;
+                        &lt;option value="2"&gt;Opción 2&lt;/option&gt;
+                      &lt;/optgroup&gt;
+                      &lt;optgroup label="Categoría 2"&gt;
+                        &lt;option value="3"&gt;Opción 3&lt;/option&gt;
+                        &lt;option value="4"&gt;Opción 4&lt;/option&gt;
+                        &lt;option value="5"&gt;Opción 5&lt;/option&gt;
+                      &lt;/optgroup&gt;
+                    &lt;/select&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>Las etiquetas <span class="ubuntu-regular-italic">optgroup</span> no son seleccionables, pero si se les puede añadir el atributo <span class="ubuntu-regular-italic">disable</span> para no permitir la selección</p>
+        <form method="post" action="/send/">
+            Selecciona la opción deseada:
+            <select>
+              <optgroup label="Categoría 1">
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+              </optgroup>
+              <optgroup label="Categoría 2">
+                <option value="3">Opción 3</option>
+                <option value="4">Opción 4</option>
+                <option value="5">Opción 5</option>
+              </optgroup>
+            </select>
+          </form>
+          <p>También se puede permitir una selección múltiple añadiendo el atributo <span class="ubuntu-bold">multiple</span> a la etiqueta <span class="ubuntu-regular-italic">select</span></p>
+          <p>Hay que recordar que para realizar multiples selcciones hay que matener presionado la tecla <kbd>CTRL</kbd> o <kbd>SHIFT</kbd></p>
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-select/">Pista de Manz</a>
+        <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>
