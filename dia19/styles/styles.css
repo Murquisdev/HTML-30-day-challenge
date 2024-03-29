@@ -1,0 +1,44 @@
+
+@import url('fonts.css');
+@import url('prism.css');
+
+body{
+    background-color:#42474a;
+    color: #f6dab6;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+a{
+    color:whitesmoke;
+}
+table{
+    border: 1px solid black;
+    caption-side: bottom;
+}
+th, td{
+    padding: 8px;
+}
+th{
+    background-color: blue;
+}
+tr:nth-child(odd){
+    background-color: #1b1d1f;
+    
+}
+tr:nth-child(even){
+    background-color: #1b1d1f67;
+}
+tfoot td{
+    background-color: rgba(42, 42, 160, 0.89);
+}
+caption{
+    padding: 8px;
+}

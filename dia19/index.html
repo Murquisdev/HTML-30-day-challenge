@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 19</title>
+    <meta name="description" content="Solución del reto del Día 19 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una tabla con información. Incluye una cabecera y un pie de tabla. La última columna será de un color diferente..">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 19 - Murquisdev</h1>
+        <h2>Crea una tabla con información. Incluye una cabecera y un pie de tabla. La última columna será de un color diferente.</h2>
+    </header>
+    <main>
+        <p>Como era de esperar, HTML tiene la etiqueta <span class="ubuntu-bold">table</span> para mostrar tablas, pero esta solo es la etiqueta contenedora, se parece a la etiqueta <span class="ubuntu-regular-italic">ul</span> o <span class="ubuntu-regular-italic">ol</span>, que para que funcione correctamente son necesarias las etiquetas <span class="ubuntu-regular-italic">li</span>.</p>
+        <ul>
+            <li><span class="ubuntu-bold">table</span>: Etiqueta contenedora de la tabla</li>
+            <li><span class="ubuntu-bold">tr</span>: Etiqueta contenedora de cada fila (<span class="ubuntu-regular-italic">Table Row</span>)</li>
+            <li><span class="ubuntu-bold">td</span>: Cada celda de la tabla (<span class="ubuntu-regular-italic">Table Data</span>)</li>
+            <li><span class="ubuntu-bold">th</span>: Cada celda de la cabecera de la tabla (<span class="ubuntu-regular-italic">Table Header</span>)</li>
+        </ul>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;table&gt;
+                    &lt;!-- Fila de la cabecera --&gt;
+                    &lt;tr&gt;
+                    &lt;th&gt;Título columna 1&lt;/th&gt; &lt;!-- Celda cabecera de la columna 1 --&gt;
+                    &lt;th&gt;Título columna 2&lt;/th&gt; &lt;!-- Celda cabecera de la columna 2 --&gt;
+                    &lt;th&gt;Título columna 3&lt;/th&gt; &lt;!-- Celda cabecera de la columna 3 --&gt;
+                    &lt;/tr&gt;
+                    &lt;!-- Primera fila --&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt;Celda 1x1&lt;/td&gt; &lt;!-- Primera celda de la primera fila --&gt;
+                    &lt;td&gt;Celda 2x1&lt;/td&gt; &lt;!-- Segunda celda de la primera fila --&gt;
+                    &lt;td&gt;Celda 3x1&lt;/td&gt; &lt;!-- Tercera celda de la primera fila --&gt;
+                    &lt;/tr&gt;
+                    &lt;!-- Segunda fila --&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt;Celda 1x2&lt;/td&gt; &lt;!-- Primera celda de la segunda fila --&gt;
+                    &lt;td&gt;Celda 2x2&lt;/td&gt; &lt;!-- Segunda celda de la segunda fila --&gt;
+                    &lt;td&gt;Celda 3x2&lt;/td&gt; &lt;!-- Tercera celda de la segunda fila --&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p>Además dispone de etiquetas semánticas, que incluso cambiarán el orden si es necesario, es decir, si pongo primero la etiqueta <span class="ubuntu-bold">tfoot</span>, el navegador la pondrá en la última fila.</p>
+        <ul>
+            <li><span class="ubuntu-bold">thead</span>: Etiqueta contenedora de la cabecera de la tabla</li>
+            <li><span class="ubuntu-bold">tbody</span>: Etiqueta contenedora del cuerpo de la tabla</li>
+            <li><span class="ubuntu-bold">tfoot</span>: Etiqueta contenedora del pie de la tabla</li>
+            <li><span class="ubuntu-bold">caption</span>: Establece un título a la tabla</li>
+        </ul>
+        <p>Con lo que el siguiente código se verá de la siguiente forma</p>
+        <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;table&gt;
+                &lt;caption&gt;Título de la tabla&lt;/caption&gt;
+                &lt;thead&gt;
+                    &lt;th&gt;Titulo 1&lt;/th&gt;
+                    &lt;th&gt;Título 2&lt;/th&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;F1 - dato 1&lt;/td&gt;
+                        &lt;td&gt;F1 - dato 2&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;F2 - dato 1&lt;/td&gt;
+                        &lt;td&gt;F2 - dato 2&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt;F3 - dato 1&lt;/td&gt;
+                    &lt;td&gt;F3 - dato 2&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/tbody&gt;
+                &lt;tfoot&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Pie 1&lt;/td&gt;
+                        &lt;td&gt;Pie 2&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tfoot&gt;
+            &lt;/table&gt;
+        </code>
+        </pre>
+        <p>La posición del título se puede modificar con la propiedad <span class="ubuntu-bold">caption-side</span></p>
+        <p>Y añadiendo unos estilos a la tabla:</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-css">
+                table{
+                    border: 1px solid black;
+                    caption-side: bottom;
+                }
+                th, td{
+                    padding: 8px;
+                }
+                th{
+                    background-color: blue;
+                }
+                tr:nth-child(odd){
+                    background-color: #1b1d1f;
+                    
+                }
+                tr:nth-child(even){
+                    background-color: #1b1d1f67;
+                }
+                tfoot td{
+                    background-color: rgba(42, 42, 160, 0.89);
+                }
+                caption{
+                    padding: 8px;
+                }
+            </code>
+            </pre>
+        <table>
+            <caption>Título de la tabla</caption>
+            <thead>
+                <th>Titulo 1</th>
+                <th>Título 2</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>F1 - dato 1</td>
+                    <td>F1 - dato 2</td>
+                </tr>
+                <tr>
+                    <td>F2 - dato 1</td>
+                    <td>F2 - dato 2</td>
+                </tr>
+                <tr>
+                    <td>F3 - dato 1</td>
+                    <td>F3 - dato 2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Pie 1</td>
+                    <td>Pie 2</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <br><br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/tablas/etiqueta-html-table/">Pista de Manz</a>
+        <p>Artículos leidos:</p>
+        <ul>
+            <li><a href="https://lenguajehtml.com/html/tablas/organizacion-tablas/">Organización de tablas</a></li>
+        </ul>
+        <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>

@@ -26,7 +26,7 @@ Repositorio para realizar los retos propuestos de **HTML** por [Manzdev](https:/
 | 16 | Muestra un texto con el atajo de teclado CTRL+ALT+SUPR y dale estilo para que parezcan teclas.                        | 📁 [16/](/dia16/) |[Día 16](https://murquisdev.github.io/HTML-30-day-challenge/dia16/index.html) |
 | 17 | Crea una card de usuario: username como título, un avatar, edad, país, nacimiento y enlace a su web.                  | 📁 [17/](/dia17/) |[Día 17](https://murquisdev.github.io/HTML-30-day-challenge/dia17/index.html) |
 | 18 | Crea un pequeño artículo de prensa con una noticia inventada. Usa etiquetas HTML semánticas.                          | 📁 [18/](/dia18/) |[Día 18](https://murquisdev.github.io/HTML-30-day-challenge/dia18/index.html) |
-| 19 | Crea una tabla con información. Incluye una cabecera y un pie de tabla. La última columna será de un color diferente. |                |
+| 19 | Crea una tabla con información. Incluye una cabecera y un pie de tabla. La última columna será de un color diferente. | 📁 [19/](/dia19/) |[Día 19](https://murquisdev.github.io/HTML-30-day-challenge/dia19/index.html) |               |
 | 20 | Crea un formulario para dejar un comentario en una página: Usuario y comentario de texto.                             |                |
 | 21 | Crea una lista desplegable donde se pueda seleccionar entre 3 grupos de productos ficticios.                          |                |
 | 22 | En la lista anterior, permite al usuario introducir opciones personalizadas y filtrar de datos.                       |                |
