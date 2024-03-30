@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 22</title>
+    <meta name="description" content="Solución del reto del Día 22 del HTML-30-day-challenge de ManzDev por Murquisdev. En la lista anterior, permite al usuario introducir opciones personalizadas (no sólo las de la lista) y filtrar las opciones existentes.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 22 - Murquisdev</h1>
+        <h2>En la lista anterior, permite al usuario introducir opciones personalizadas (no sólo las de la lista) y filtrar las opciones existentes.</h2>
+    </header>
+    <main>
+        <form class="form-food" method="post" action="#" name="food">
+            Seleciona el ingrediente:
+            <input type="text" list="foodSelect" id="input-foodSelect">
+            <datalist id="foodSelect">
+                <option value="cebolla">Cebolla</option>
+                <option value="lechuga">Lechuga</option>
+                <option value="pepinillos">Pepinillos</option>
+                <option value="ternera">Ternera</option>
+                <option value="pollo">Pollo</option>
+                <option value="cerdo">Cerdo</option>
+                <option value="bacon">Bacon</option>
+                <option value="queso">Queso</option>
+                <option value="barbacoa">Salsa barbacoa</option>
+            </datalist>
+            <input type="submit" value="Solicitar ingrediente">
+        </form>
+        <p>La etiqueta <span class="ubuntu-bold">datalist</span> se utiliza cuando queremos dar unas opciones a elegir, además de que el usuario quiera añadir las suyas.</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;datalist id="items"&gt;
+                    &lt;option value="1"&gt;Opción 1&lt;/option&gt;
+                    &lt;option value="2"&gt;Opción 2&lt;/option&gt;
+                &lt;/datalist&gt;
+            </code>
+        </pre>
+        <p>Esto no mostrará nada visualmente, porque solo crea la lista de datos, ahora hay que conectarla a un campo de entrada.</p>
+        <p>Por ejemplo: Para conectar el <span class="ubuntu-regular-italic">datalist</span> con el <span class="ubuntu-regular-italic">input</span>, utilizamos el atributo <span class="ubuntu-bold">list</span> y le agregamos el valor del <span class="ubuntu-regular-italic">#id</span> del <span class="ubuntu-regular-italic">datalist</span></p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;form method="post" action="/send/"&gt;
+                    &lt;input type="text" list="items"&gt;
+                    &lt;datalist id="items"&gt;
+                      &lt;option value="manzdev"&gt;ManzDev&lt;/option&gt;
+                      &lt;option value="afor_digital"&gt;Afor_digital&lt;/option&gt;
+                      &lt;option value="padawanstrainer"&gt;PadawansTrainer&lt;/option&gt;
+                      &lt;option value="chrisvdev"&gt;ChrisvDev&lt;/option&gt;
+                    &lt;/datalist&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>En este ejemplo, vemos que el id del <span class="ubuntu-regular-italic">datalist</span> es <span class="ubuntu-regular-italic">items</span> y al atributo <span class="ubuntu-bold">list</span> del <span class="ubuntu-regular-italic">input</span> le hemos agregado el valor <span class="ubuntu-regular-italic">items</span>. Asociando así la lista a ese <span class="ubuntu-regular-italic">input</span></p>
+        <p>Si el usuario escribe, se filtraran los resultados a mostrar. En Firefox es necesario hacer doble <span class="ubuntu-regular-italic">click</span> para mostrar los elementos.</p>
+        <form method="post" action="#">
+            <input type="text" list="items">
+            <datalist id="items">
+              <option value="manzdev">ManzDev</option>
+              <option value="afor_digital">Afor_digital</option>
+              <option value="padawanstrainer">PadawansTrainer</option>
+              <option value="chrisvdev">ChrisvDev</option>
+            </datalist>
+        </form>
+        <p>Con lo que el usario podrá introducir su propio valor o alguno ya existente.</p>
+        
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-datalist/">Pista de Manz</a>
+        <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>
