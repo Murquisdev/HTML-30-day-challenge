@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <meta name="description" content="Solución del reto del Día 24 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea un formulario de registro que valide si el username escrito es válido (sólo letras y números) o no.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 24 - Murquisdev</h1>
+        <h2>Crea un formulario de registro que valide si el username escrito es válido (sólo letras y números) o no.</h2>
+    </header>
+    <main>
+        <form class="testForm" method="post" action="#" name="username">
+            Nombre de usuario:
+            <input type="text" name="username"
+            required pattern="[A-Za-z0-9]{3,40}"
+            title="Letras y números. Tamaño: 3-40">
+            <input type="submit" value="Enviar">
+        </form>
+        <p>El ser humano comete errores, bien sean de programación, ambigüedad en el diseño o el propio usuario introduce los datos incorrectamente. Es por eso que es necesario validar la información siempre antes de procesarla o guardarla.</p>
+        <p>La validación se puede realizar en dos escenarios:</p>
+        <ul>
+            <li>
+                <span class="ubuntu-bold">front-end</span>: En el navegador del usuario.
+                <ul>
+                    <li>Se puede realizar con HTML (más moderna) y/o JS.</li>
+                    <li>Respuesta inmediata.</li>
+                    <li>Es una capa de seguirdad, pero el usuario la puede desactivar, con lo que se recomienda usarla junto con el <span class="ubuntu-regular-italic">back-end</span>.</li>
+                </ul>
+            </li>
+            <li>
+                <span class="ubuntu-bold">back-end</span>: En el servidor.
+                <ul>
+                    <li>Puede llevar una demora entre que los datos van al servidor, comprueba y vuelven al navegador del usuario.</li>
+                    <li>Es probable que el usuario tenga que volver a rellenar los datos, emprobeciendo la experiencia de uso.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>Es por ello que se recomienda usar una doble validación <span class="ubuntu-regular-italic">front-end</span> y <span class="ubuntu-regular-italic">back-end</span>.</p>
+        <h3>Validaciones básicas HTML5</h3>
+        <p>Hay una serie de atributos que se pueden añadir a los inputs para realizar unas validaciones básicas (aparte de que el propio inptut funciona como validación con el <span class="ubuntu-regular-italic">type</span> que se le indique)</p>
+        <ul>
+            <li><span class="ubuntu-bold">maxlength</span>: Longitud máxima de texto.</li>
+            <li><span class="ubuntu-bold">minlength</span>: Longitud mínima de texto.</li>
+            <li><span class="ubuntu-bold">max</span>: Número / Fecha máxima.</li>
+            <li><span class="ubuntu-bold">min</span>: Número / Fecha mínima.</li>
+            <li><span class="ubuntu-bold">step</span>: Salto permitido en números / días / segundos (Por defecto 1).</li>
+            <li><span class="ubuntu-bold">required</span>: Campo obligatorio.</li>
+            <li><span class="ubuntu-bold">disable</span>: Campo desactivado (no se envía).</li>
+            <li><span class="ubuntu-bold">readonly</span>: Campo de solo lectura (se envía).</li>
+        </ul>
+        <p>Una posible forma de indicar la validación con CSS es:</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-css">
+                :is(input, textarea):invalid {
+                    background: red;
+                  }
+                  
+                  :is(input, textarea):valid {
+                    background: green;
+                  };
+            </code>
+        </pre>
+        <p>Con este código CSS si un <span class="ubuntu-regular-italic">input</span> o <span class="ubuntu-regular-italic">textarea</span> no pasa la validación se pondrá en rojo, sino en verde.</p>
+        <h3>Patrones RegExp (expresiones regulares)</h3>
+        <p>El atributo <span class="ubuntu-bold">pattern</span> permite utilizar expresiones regulares y se puede incluir en los siguientes <span class="ubuntu-regular-italic">input</span>:</p>
+        <ul>
+            <li><span class="ubuntu-regular-italic">text</span>.</li>
+            <li><span class="ubuntu-regular-italic">search</span>.</li>
+            <li><span class="ubuntu-regular-italic">url</span>.</li>
+            <li><span class="ubuntu-regular-italic">tel</span>.</li>
+            <li><span class="ubuntu-regular-italic">email</span>.</li>
+            <li><span class="ubuntu-regular-italic">password</span>.</li>
+        </ul>
+        <p>Por ejemplo:</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;form method="post" action="/send/"&gt;
+                    Nombre:
+                    &lt;input type="text" name="username" pattern="a.+" required&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>Estamos indicando el <span class="ubuntu-regular-italic">username</span> es obligatorio (required), tiene que comenzar por la letra "a" y tenga uno o más caracteres.</p>
+        <table>
+            <tr>
+                <th>Expresión regular</th>
+                <th>Carácter especial</th>
+                <th>Significado</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>.</td>
+                <td>Punto</td>
+                <td>Comodín</td>
+                <td>Cualquier carácter</td>
+            </tr>
+            <tr>
+                <td>A | B</td>
+                <td>Pipe</td>
+                <td>Opereaciones lógicas</td>
+                <td>Opciones alternativas (A o B)</td>
+            </tr>
+            <tr>
+                <td>C(A|B)</td>
+                <td>Paréntesis</td>
+                <td>Agrupaciones</td>
+                <td>Agrupaciones alternativas (CA o CB)</td>
+            </tr>
+            <tr>
+                <td>[0-9]</td>
+                <td>Corchetes</td>
+                <td>Rango de caracteres</td>
+                <td>Un dígito del 0 al 9</td>
+            </tr>
+            <tr>
+                <td>[A-Z]</td>
+                <td></td>
+                <td></td>
+                <td>Una letra mayúscula de la A a la Z</td>
+            </tr>
+            <tr>
+                <td>[<span class="ubuntu-bold">^</span>A-Z]</td>
+                <td><span class="ubuntu-bold">^</span> en corchetes</td>
+                <td>Rango de exclusión</td>
+                <td>Una letra que NO sea una mayúscula de la A a la Z</td>
+            </tr>
+            <tr>
+                <td>[0-9]*</td>
+                <td>Asterisco</td>
+                <td>Cierre o clausura</td>
+                <td>Un dígito repetido cero o más veces (vacío incluido)</td>
+            </tr>
+            <tr>
+                <td>[0-9]+</td>
+                <td>Signo más</td>
+                <td>Cierre positivo</td>
+                <td>Un dígito repetido una o más veces (vacío incluido)</td>
+            </tr>
+            <tr>
+                <td>[0-9]{3}</td>
+                <td>Llaves</td>
+                <td>Coincidencia exacta</td>
+                <td>Cifra de 3 dígitos</td>
+            </tr>
+            <tr>
+                <td>[0-9]{2,4}</td>
+                <td></td>
+                <td>Coincidencia rango</td>
+                <td>Cifra de 2 a 4 dígitos</td>
+            </tr>
+            <tr>
+                <td>b?</td>
+                <td>Interrogación</td>
+                <td>Carácter opcional</td>
+                <td>El carácter b puede aparecer o no</td>
+            </tr>
+            <tr>
+                <td>\. \[</td>
+                <td>Barra invertida</td>
+                <td>Escape</td>
+                <td>Es el caracter "." y "[" literalmente.</td>
+            </tr>
+        </table>
+        <p>Hay que tener en cuenta que al utilizar los atributos <span class="ubuntu-regular-italic">maxlength</span> o <span class="ubuntu-regular-italic">max</span> (también con <span class="ubuntu-regular-italic">minlength</span> o <span class="ubuntu-regular-italic">min</span>) la no validación la pasa de forma silenciosa y es probable que el usuario no sepa que está ocurriendo.</p>
+        <p>En cambio el atributo <span class="ubuntu-bold">pattern</span> muestra un mensaje de error e incluso se le puede añadir una descripción con el atributo <span class="ubuntu-bold">title</span></p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;form method="post" action="/send/"&gt;
+                    &lt;input type="text" name="username" placeholder="ManzDev"
+                           required pattern="[A-Za-z0-9]{5,40}"
+                           title="Letras y números. Tamaño: 5-40"&gt;
+                  &lt;/form&gt;
+            </code>
+        </pre>
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-fechas/">Pista de Manz</a>
+    <p>Artículos leídos:</p>
+    <ul>
+        <li><a href="https://lenguajehtml.com/html/validaciones/que-son-validaciones/">¿Qué son las validaciones?</a></li>
+        <li><a href="https://lenguajehtml.com/html/validaciones/que-son-validaciones/">¿Qué son las validaciones?</a></li>
+    </ul>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>

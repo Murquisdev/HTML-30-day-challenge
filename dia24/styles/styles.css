@@ -1,0 +1,135 @@
+
+@import url('fonts.css');
+@import url('prism.css');
+
+body{
+    background-color:#42474a;
+    color: #f6dab6;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.4;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+a{
+    color:whitesmoke;
+}
+form{
+    margin-left: 12px;
+}
+input{
+    padding: 8px;
+    background-color: #212425;
+    color: #f6dab6;
+}
+input::placeholder{
+    color: #f6dab6b2;
+}
+input[type="text"]{
+    margin-bottom: 8px;
+}
+textarea{
+    padding: 8px;
+    background-color: #212425;
+    color: #f6dab6;
+    margin-bottom: 8px;
+    resize: none;
+}
+textarea::placeholder{
+    color: #f6dab6b2;
+}
+kbd{
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    padding: 4px 8px;
+    border: 3px solid rgb(29, 29, 29);
+    border-top-width: 1px;
+    border-bottom: 3px solid rgb(15, 15, 15);
+    border-radius: 4px;
+    transition: border 0.3s ease-in-out, 
+                border-bottom-width 0.3s ease-in-out, 
+                border-top 0.3s ease-in-out,
+                background-color 0.3s ease-in-out;
+}
+kbd:hover{
+    cursor: pointer;
+    border: 3px solid rgb(29, 29, 29);
+    border-bottom-width: 1px;
+    border-top: 3px solid rgb(15, 15, 15);
+    background-color: #1e2122;
+}
+.testForm{
+    display: inline-block;
+    text-align: center;
+}
+.testForm input{
+    padding: 8px 8px;
+    margin: 8px 8px;
+    border-radius: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background-color: #212425;
+    color:#f6dab6;
+    border: 1px solid #f6dab68a;
+    box-shadow: 4px 4px 10px rgb(0, 0, 0,0.65);  
+}
+.testForm input:is(input, textarea):invalid{
+    animation: change-outline-invalid 3s infinite;
+}
+@keyframes change-outline-invalid{
+    0% { outline: 1px solid transparent;}
+    50% {outline: 1px solid red;}
+    100% {outline: 1px solid transparent;}
+}
+.testForm input:not([type="submit"]):is(input, textarea):valid{
+    animation: change-outline-valid 3s infinite;
+}
+@keyframes change-outline-valid{
+    0% { outline: 1px solid transparent;}
+    50% {outline: 1px solid green;}
+    100% {outline: 1px solid transparent;}
+}
+
+.testForm input[type="submit"]{
+    transition: background-color 0.4s ease-in-out,
+                color 0.4s ease-in-out,
+                box-shadow 0.4s ease-in-out;
+
+}
+.testForm input[type="submit"]:hover{
+    background-color: #f6dab6;
+    color:#42474a;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgb(129, 129, 129, 0.4);
+}
+table{
+    border: 2px solid rgb(0, 0, 0, 0.7);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    caption-side: bottom;
+    border-radius: 2px;
+}
+th, td{
+    padding: 8px;
+}
+th{
+    background-color: blue;
+}
+tr:nth-child(odd){
+    background-color: #1b1d1f;
+    
+}
+tr:nth-child(even){
+    background-color: #1b1d1f67;
+}
+tfoot td{
+    background-color: rgba(42, 42, 160, 0.89);
+}
+caption{
+    padding: 8px;
+}
