@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 23</title>
+    <meta name="description" content="Solución del reto del Día 23 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea un formulario que te permita elegir un día entre el 15/nov y el 15/dic.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 23 - Murquisdev</h1>
+        <h2>Crea un formulario que te permita elegir un día entre el 15/nov y el 15/dic.</h2>
+    </header>
+    <main>
+        <p>La etiqueta <span class="ubuntu-regular-italic">input</span> tiene muchos tipos posobiles, uno de ellos son los <span class="ubuntu-regular-italic">type</span> relacionados con fechas:</p>
+        <ul>
+            <li><span class="ubuntu-bold">date</span>: Permite elegir una fecha.</li>
+            <li><span class="ubuntu-bold">month</span>: Permite introducir un mes.</li>
+            <li><span class="ubuntu-bold">week</span>: Permite introducir una semana.</li>
+            <li><span class="ubuntu-bold">time</span>: Permite introducir una hora.</li>
+            <li><span class="ubuntu-bold">datetime-local</span>: Permite introducir una fecha y hora.</li>
+        </ul>
+        <p>Como en el resto de <span class="ubuntu-regular-italic">inputs</span>, se les puede aplicar los atributos, <span class="ubuntu-regular-italic">value</span>, <span class="ubuntu-regular-italic">max</span>, <span class="ubuntu-regular-italic">min</span>,...</p>
+        <p>Además hay que recordar que los controles cambian según el navegador:</p>
+        <table>
+            <caption>Como se ven los inptus en Firefox y Edge</caption>
+            <tr>
+                <th>Firefox</th>
+                <th>Edge</th>
+            </tr>
+            <tr>
+                <td><img src="./img/inputsFirefox.png" alt="Como se ven los inputs en Firefox" width="344" height="327"></td>
+                <td><img src="./img/inputsEdge.png" alt="Como se ven los inputs en Edge" width="344" height="327"></td>
+            </tr>
+        </table>
+        <p>Código</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;form class="choose-date" method="post" action="#" name="choose-date"&gt;
+                Seleciona la fecha:
+                &lt;input type="date" 
+                min="2024-11-15" max="2024-12-15"&gt;
+                
+                &lt;input type="submit" value="Enviar"&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <p>Resultado:</p>
+        <form class="choose-date" method="post" action="#" name="choose-date">
+            Seleciona la fecha:
+            <input type="date" 
+                   min="2024-11-15" max="2024-12-15">
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/formularios/etiqueta-html-input-fechas/">Pista de Manz</a>
+        <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>

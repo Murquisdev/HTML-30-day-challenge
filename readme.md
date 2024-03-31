@@ -29,8 +29,8 @@ Repositorio para realizar los retos propuestos de **HTML** por [Manzdev](https:/
 | 19 | Crea una tabla con información. Incluye una cabecera y un pie de tabla. La última columna será de un color diferente. | 📁 [19/](/dia19/) |[Día 19](https://murquisdev.github.io/HTML-30-day-challenge/dia19/index.html) |
 | 20 | Crea un formulario para dejar un comentario en una página: Usuario y comentario de texto.                             | 📁 [20/](/dia20/) |[Día 20](https://murquisdev.github.io/HTML-30-day-challenge/dia20/index.html) |
 | 21 | Crea una lista desplegable donde se pueda seleccionar entre 3 grupos de productos ficticios.                          | 📁 [21/](/dia21/) |[Día 21](https://murquisdev.github.io/HTML-30-day-challenge/dia21/index.html) |
-| 22 | En la lista anterior, permite al usuario introducir opciones personalizadas y filtrar de datos.                       | 📁 [22/](/dia22/) |[Día 22](https://murquisdev.github.io/HTML-30-day-challenge/dia22/index.html) |               |
-| 23 | Crea un formulario que te permita elegir un día entre el 15/nov y el 15/dic.                                          |                |
+| 22 | En la lista anterior, permite al usuario introducir opciones personalizadas y filtrar de datos.                       | 📁 [22/](/dia22/) |[Día 22](https://murquisdev.github.io/HTML-30-day-challenge/dia22/index.html) |
+| 23 | Crea un formulario que te permita elegir un día entre el 15/nov y el 15/dic.                                          | 📁 [23/](/dia23/) |[Día 23](https://murquisdev.github.io/HTML-30-day-challenge/dia23/index.html) |
 | 24 | Crea un formulario de registro que valide si el username escrito es válido (sólo letras y números) o no.              |                |
 | 25 | Crea una galería de fotos. Asegúrate que no se cargan si están fuera de la región visible del navegador.              |                |
 | 26 | Crea un mensaje emergente al pulsar un botón, que desaparezca al pulsar fuera del mensaje.                            |                |
