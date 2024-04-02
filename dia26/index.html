@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 26</title>
+    <meta name="description" content="Solución del reto del Día 26 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea un mensaje emergente al pulsar un botón, que desaparezca al pulsar fuera del mensaje.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 26 - Murquisdev</h1>
+        <h2>Crea un mensaje emergente al pulsar un botón, que desaparezca al pulsar fuera del mensaje.</h2>
+    </header>
+    <main>
+        <p>HTML5 tiene el atributo <span class="ubuntu-bold">popover</span> con el que se pueden crear elementos emergentes sin falta de JS:</p>
+        <ul>
+            <li><span class="ubuntu-bold">popover</span>: Convierte el elemento HTML en un potencial contenido emergente (<span class="ubuntu-regular-italic">auto</span> por defecto)</li>
+            <li><span class="ubuntu-bold">popovertarget</span>: Indica el id del elemento a manipular</li>
+            <li>
+                <span class="ubuntu-bold">popovertargetaction</span>: Indica la acción a realizar
+                <ul>
+                    <li><span class="ubuntu-bold">show</span>: Lo muestra</li>
+                    <li><span class="ubuntu-bold">hide</span>: Lo oculta</li>
+                    <li><span class="ubuntu-bold">toggle</span>: Va cambiando</li>
+                </ul>
+            </li>
+        </ul>
+        <p>Por defecto el elemento con el atributo <span class="ubuntu-bold">popover</span> desparece. Esto es porque los navegadores tienen un estilo CSS que los oculta por defecto.</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;button popovertarget="message" popovertargetaction="toggle"&gt;Mostrar mensaje&lt;/button&gt;
+                &lt;div id="message" popover&gt;
+                    &lt;p&gt;&lt;strong&gt;¡Psyduck!&lt;/strong&gt; es el mejor &lt;em&gt;Pokémon&lt;/em&gt; de todos.&lt;/p&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+        
+        
+        <button popovertarget="message" popovertargetaction="toggle">Mostrar mensaje</button>
+        <div id="message" popover>
+            <p><strong>¡Psyduck!</strong> es el mejor <em>Pokémon</em> de todos.</p>
+        </div>
+        <p>Como siempre, con CSS se puede modificar el elemento emergente e incluso como se ve el fondo:</p>
+        <ul>
+            <li><span class="ubuntu-bold">[popover]</span>: Aplica los estilos a cualquier elemento con el atributo <span class="ubuntu-regular-italic">popover</span></li>
+            <li><span class="ubuntu-bold">::backdrop</span>: Aplica estilos al fondo de la página al mostrar el <span class="ubuntu-regular-italic">popover</span></li>
+            <li><span class="ubuntu-bold">:popover-open</span>: Aplica estilos al <span class="ubuntu-regular-italic">popover</span> abierto</li>
+        </ul>
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/interactivas/popover-elementos-emergentes/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>
