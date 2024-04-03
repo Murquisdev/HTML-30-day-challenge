@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 27</title>
+    <meta name="description" content="Solución del reto del Día 27 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una serie de etiquetas que permitan mostrar como miniatura una imagen en redes sociales.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Etiquetas de Facebook (Meta) -->
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Solución del reto del Día 27 del HTML-30-day-challenge de ManzDev por Murquisdev">
+        <meta property="og:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia27/index.html">
+        <meta property="og:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia27/img/psyduck3.jpg">
+        <meta property="og:description" content="Solución del reto del Día 27 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una serie de etiquetas que permitan mostrar como miniatura una imagen en redes sociales.">
+    <!-- FIN Etiquetas de Facebook (Meta) -->
+    <!-- Etiquetas de Twitter (X) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:creator" content="@murquisdev">
+    <meta property="twitter:title" content="Solución del reto del Día 27 del HTML-30-day-challenge de ManzDev por Murquisdev">
+    <meta property="twitter:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia27/index.html">
+    <meta property="twitter:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia27/img/psyduck3.jpg">
+    <meta property="twitter:description" content="Solución del reto del Día 27 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una serie de etiquetas que permitan mostrar como miniatura una imagen en redes sociales.">
+    <!-- FIN Etiquetas de Twitter (X) -->
+    <script src="./js/prism.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 27 - Murquisdev</h1>
+        <h2>Crea una serie de etiquetas que permitan mostrar como miniatura una imagen en redes sociales.</h2>
+    </header>
+    <main>
+        <p>En el <span class="ubuntu-bold">head</span> del documento HTML se establecen una serie de etiquetas <span class="ubuntu-regular-italic">meta</span>.</p>
+        <p>Además de las etiquetas vistas (title, description), se pueden añadir etiquetas con información para redes sociales.</p>
+        <h3>Facebook (Meta)</h3>
+        <p>Meta utilza el protocolo <a href="https://ogp.me/">Open Graph</a>:</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;head&gt;
+                    &lt;meta property="og:type" content="article"&gt;
+                    &lt;meta property="og:title" content="Título del post"&gt;
+                    &lt;meta property="og:url" content="https://pagina.com/posts/32/titulo-del-post"&gt;
+                    &lt;meta property="og:image" content="https://pagina.com/assets/post-32.jpg"&gt;
+                    &lt;meta property="og:description" content="Descripción del post de la página"&gt;
+                &lt;/head&gt;
+            </code>
+        </pre>
+        <p>Se puede utilizar el <a href="https://developers.facebook.com/tools/debug/">Open Graph Debbuger</a> para comprobar errores.</p>
+   
+        <h3>Twitter (X)</h3>
+        <p>Por su lado Twitter utiliza otro sistema llamado <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Cards</a></p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;head&gt;
+                    &lt;meta property="twitter:card" content="summary_large_image" /&gt;
+                    &lt;meta property="twitter:creator" content="@Manz" /&gt;
+                    &lt;meta property="twitter:title" content="Título" /&gt;
+                    &lt;meta property="twitter:url" content="https://pagina.com/posts/32/titulo-del-post"&gt;
+                    &lt;meta property="twitter:image" content="https://pagina.com/assets/post-32.jpg" /&gt;
+                    &lt;meta property="twitter:description" content="Descripción" /&gt;
+                &lt;/head&gt;
+            </code>
+        </pre>
+        <p>Tiene el <a href="https://cards-dev.twitter.com/validator">Twitter Cards Validator</a>, para comprobar errores.</p>
+        <p>Se recomienda un formato de imagen 2:1, con un tamaño mínimo de 300x157 y máximo de 4096x4096 (5MB) (JPG, PNG, WEBP o GIF)</p>
+        <hr>
+        <p>Quedando la cabecera del documento como sigue para que las redes sociales de Meta y Twitter puedan crear una previsualización:</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;!-- Etiquetas de Facebook (Meta) --&gt;
+                &lt;meta property="og:type" content="article"&gt;
+                &lt;meta property="og:title" content="Solución del reto del Día 27 del HTML-30-day-challenge de ManzDev por Murquisdev"&gt;
+                &lt;meta property="og:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia27/index.html"&gt;
+                &lt;meta property="og:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia27/img/psyduck3.jpg"&gt;
+                &lt;meta property="og:description" content="Solución del reto del Día 27 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una serie de etiquetas que permitan mostrar como miniatura una imagen en redes sociales."&gt;
+                &lt;!-- FIN Etiquetas de Facebook (Meta) --&gt;
+                &lt;!-- Etiquetas de Twitter (X) --&gt;
+                &lt;meta property="twitter:card" content="summary_large_image"&gt;
+                &lt;meta property="twitter:creator" content="@murquisdev"&gt;
+                &lt;meta property="twitter:title" content="Solución del reto del Día 27 del HTML-30-day-challenge de ManzDev por Murquisdev"&gt;
+                &lt;meta property="twitter:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia27/index.html"&gt;
+                &lt;meta property="twitter:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia27/img/psyduck3.jpg"&gt;
+                &lt;meta property="twitter:description" content="Solución del reto del Día 27 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una serie de etiquetas que permitan mostrar como miniatura una imagen en redes sociales."&gt;
+                &lt;!-- FIN Etiquetas de Twitter (X) --&gt;
+            </code>
+        </pre>
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/cabecera/etiquetas-html-para-redes-sociales/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>
