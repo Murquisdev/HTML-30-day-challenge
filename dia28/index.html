@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 28</title>
+    <meta name="description" content="Solución del reto del Día 28 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una ventana modal que bloquee la interación con otros botones. Requiere un poco de Javascript.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Etiquetas de Facebook (Meta) -->
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Solución del reto del Día 28 del HTML-30-day-challenge de ManzDev por Murquisdev">
+        <meta property="og:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia28/index.html">
+        <meta property="og:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia28/img/psyduck3.jpg">
+        <meta property="og:description" content="Solución del reto del Día 28 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una ventana modal que bloquee la interación con otros botones. Requiere un poco de Javascript.">
+    <!-- FIN Etiquetas de Facebook (Meta) -->
+    <!-- Etiquetas de Twitter (X) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:creator" content="@murquisdev">
+    <meta property="twitter:title" content="Solución del reto del Día 28 del HTML-30-day-challenge de ManzDev por Murquisdev">
+    <meta property="twitter:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia28/index.html">
+    <meta property="twitter:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia28/img/psyduck3.jpg">
+    <meta property="twitter:description" content="Solución del reto del Día 28 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea una ventana modal que bloquee la interación con otros botones. Requiere un poco de Javascript.">
+    <!-- FIN Etiquetas de Twitter (X) -->
+    <script src="./js/prism.js" defer></script>
+    <script src="./js/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 28 - Murquisdev</h1>
+        <h2>Crea una ventana modal que bloquee la interación con otros botones. Requiere un poco de Javascript.</h2>
+    </header>
+    <main>
+        <p>HTML permite crear ventanas de dialogo sin JS o con muy poco uso de JS:</p>
+        <ul>
+            <li><span class="ubuntu-bold">Ventana de diálogo</span>: Ventana que se utiliza para comunicarse con el usuario para anuciar información, pedir confirmaciones, datos...</li>
+            <li><span class="ubuntu-bold">Ventana de diálogo modal</span>: Como la anterior, pero con la obligación de atenderla, imposibilitando el resto de funciones.</li>
+        </ul>
+    <p>Para ello utilizaremos la etiqueta <span class="ubuntu-bold">dialog</span> que tiene dos atributos:</p>
+    <ul>
+        <li><span class="ubuntu-bold">close</span>: Por defecto, no muestra la ventana porque los navegadores tiene puesto en su CSS <span class="ubuntu-regular-italic">display: none</span>.</li>
+        <li><span class="ubuntu-bold">open</span>: Muesrta la ventana</li>
+    </ul>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;dialog open>
+                Texto dentro de la ventana de dialogo.
+            &lt;/dialog&gt;
+        </code>
+    </pre>
+    <p>Para poder interactuar con la ventana modal, necesitamos usar JS, con lo que vamos a añadir lo siguiente:</p>
+    <ul>
+        <li><span class="ubuntu-regular-italic">Un botón</span>: Que cambie el atributo <span class="ubuntu-regular-italic">close</span> a <span class="ubuntu-regular-italic">open</span> para mostrar la ventana</li>
+        <li><span class="ubuntu-regular-italic">Id</span>: Para identificar la etiqueta donde debe actuar el botón</li>
+    </ul>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;dialog id="windowToShow"&gt;
+                Texto dentro de la ventana de dialogo.
+                &lt;button onClick="this.parentElement.close()"&gt;Aceptar &lt;/button&gt;
+            &lt;/dialog&gt;
+            &lt;button id="show-dialog"&gt;Ver ventana&lt;/button&gt;
+        </code>
+    </pre>    
+    <p>Por otro lado, en el JS:</p> 
+    <ol>
+        <li>Seleccionamos el botón: Mediaten el método <span class="ubuntu-bold">querySelector</span> seleccionamos el botón</li>
+        <li>Añadiemos un evento de escucha (<span class="ubuntu-bold">addEventListener</span>) al botón, para saber cuando se pulsa</li>
+        <li>Indicamos que ocurre al pulsar el botón mediante una función
+            <ol>
+                <li>Seleccionamos el dialogo mediante el ID</li>
+                <li>Utilizamos el método <span class="ubuntu-bold">showModal</span> (para que muestre la ventana en modo modal, el método <span class="ubuntu-regular-italic">show</span> la muestra sin restricciones)</li>
+            </ol>
+        </li>
+    </ol>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-js">
+            const showDialog = document.querySelector("#show-dialog")
+            showDialog.addEventListener("click", function (){
+                const windowToShow = document.querySelector("#windowsToShow")
+                windowToShow.showDialog();
+            })
+        </code>
+    </pre>
+    <dialog id="windowToShow">
+        <p><strong>¡Psyduck!</strong></p>
+        <img src="./img/psyduck2.jpg" alt="Psyduck en Pokémon Concierge" width="600">
+        <button onClick="this.parentElement.close()">Aceptar </button>
+    </dialog>
+    <button id="show-dialog">Ver ventana</button>   
+    <p>Hay que recordar que con el pseudoelemento de CSS <span class="ubuntu-bold">::backdrop</span> podemos modificar la parte que queda debajo de la ventana modal </p>
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/interactivas/etiqueta-html-dialog/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>

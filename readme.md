@@ -34,7 +34,7 @@ Repositorio para realizar los retos propuestos de **HTML** por [Manzdev](https:/
 | 24 | Crea un formulario de registro que valide si el username escrito es válido (sólo letras y números) o no.              | 📁 [24/](/dia24/) |[Día 24](https://murquisdev.github.io/HTML-30-day-challenge/dia24/index.html) |
 | 25 | Crea una galería de fotos. Asegúrate que no se cargan si están fuera de la región visible del navegador.              | 📁 [25/](/dia25/) |[Día 25](https://murquisdev.github.io/HTML-30-day-challenge/dia25/index.html) |
 | 26 | Crea un mensaje emergente al pulsar un botón, que desaparezca al pulsar fuera del mensaje.                            | 📁 [26/](/dia26/) |[Día 26](https://murquisdev.github.io/HTML-30-day-challenge/dia26/index.html) |
-| 27 | Crea una serie de etiquetas que permitan mostrar como miniatura una imagen en redes sociales.                         | 📁 [27/](/dia27/) |[Día 27](https://murquisdev.github.io/HTML-30-day-challenge/dia27/index.html) |               |
-| 28 | Crea una ventana modal que bloquee la interación con otros botones. Requiere un poco de Javascript.                   |                |
+| 27 | Crea una serie de etiquetas que permitan mostrar como miniatura una imagen en redes sociales.                         | 📁 [27/](/dia27/) |[Día 27](https://murquisdev.github.io/HTML-30-day-challenge/dia27/index.html) |
+| 28 | Crea una ventana modal que bloquee la interación con otros botones. Requiere un poco de Javascript.                   | 📁 [28/](/dia28/) |[Día 28](https://murquisdev.github.io/HTML-30-day-challenge/dia28/index.html) |
 | 29 | Crea un sistema de pestañas (tabs) para mostrar información. Necesita algo de Javascript.                             |                |
 | 30 | Carga una librería Javascript de confetti y lánzalo cuando pulses en un botón. Requiere algo de Javascript.           |                |
