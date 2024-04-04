@@ -38,7 +38,7 @@
     <p>Para ello utilizaremos la etiqueta <span class="ubuntu-bold">dialog</span> que tiene dos atributos:</p>
     <ul>
         <li><span class="ubuntu-bold">close</span>: Por defecto, no muestra la ventana porque los navegadores tiene puesto en su CSS <span class="ubuntu-regular-italic">display: none</span>.</li>
-        <li><span class="ubuntu-bold">open</span>: Muesrta la ventana</li>
+        <li><span class="ubuntu-bold">open</span>: Muesrta la ventana.</li>
     </ul>
     <pre class="ubuntu-mono-regular">
         <code class="language-html">
@@ -49,8 +49,9 @@
     </pre>
     <p>Para poder interactuar con la ventana modal, necesitamos usar JS, con lo que vamos a añadir lo siguiente:</p>
     <ul>
-        <li><span class="ubuntu-regular-italic">Un botón</span>: Que cambie el atributo <span class="ubuntu-regular-italic">close</span> a <span class="ubuntu-regular-italic">open</span> para mostrar la ventana</li>
-        <li><span class="ubuntu-regular-italic">Id</span>: Para identificar la etiqueta donde debe actuar el botón</li>
+        <li>Un botón para cerrar el <span class="ubuntu-regular-italic">dialog</span></li>
+        <li><span class="ubuntu-regular-italic">Ids</span>: Para identificar la etiqueta donde debe actuar el botón y del botón exterior</li>
+        <li>Un botón para llamar al <span class="ubuntu-regular-italic">dialog</span>: Utilizando el método <span class="ubuntu-regular-italic">showModal</span></li>
     </ul>
     <pre class="ubuntu-mono-regular">
         <code class="language-html">
@@ -63,12 +64,12 @@
     </pre>    
     <p>Por otro lado, en el JS:</p> 
     <ol>
-        <li>Seleccionamos el botón: Mediaten el método <span class="ubuntu-bold">querySelector</span> seleccionamos el botón</li>
-        <li>Añadiemos un evento de escucha (<span class="ubuntu-bold">addEventListener</span>) al botón, para saber cuando se pulsa</li>
-        <li>Indicamos que ocurre al pulsar el botón mediante una función
+        <li>Seleccionamos el botón: Con el método <span class="ubuntu-bold">querySelector</span>.</li>
+        <li>Añadiemos un evento de escucha (<span class="ubuntu-bold">addEventListener</span>) al botón, para saber cuando se pulsa.</li>
+        <li>Indicamos que ocurre al pulsar el botón mediante una función.
             <ol>
-                <li>Seleccionamos el dialogo mediante el ID</li>
-                <li>Utilizamos el método <span class="ubuntu-bold">showModal</span> (para que muestre la ventana en modo modal, el método <span class="ubuntu-regular-italic">show</span> la muestra sin restricciones)</li>
+                <li>Seleccionamos el dialogo mediante el ID.</li>
+                <li>Utilizamos el método <span class="ubuntu-bold">showModal</span> (para que muestre la ventana en modo modal, el método <span class="ubuntu-regular-italic">show</span> la muestra sin restricciones).</li>
             </ol>
         </li>
     </ol>
