@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 29</title>
+    <meta name="description" content="Solución del reto del Día 29 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea un sistema de pestañas (tabs) para mostrar información. Necesita algo de Javascript.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Etiquetas de Facebook (Meta) -->
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Solución del reto del Día 29 del HTML-30-day-challenge de ManzDev por Murquisdev">
+        <meta property="og:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia29/index.html">
+        <meta property="og:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia29/img/psyduck3.jpg">
+        <meta property="og:description" content="Solución del reto del Día 29 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea un sistema de pestañas (tabs) para mostrar información. Necesita algo de Javascript.">
+    <!-- FIN Etiquetas de Facebook (Meta) -->
+    <!-- Etiquetas de Twitter (X) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:creator" content="@murquisdev">
+    <meta property="twitter:title" content="Solución del reto del Día 29 del HTML-30-day-challenge de ManzDev por Murquisdev">
+    <meta property="twitter:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia29/index.html">
+    <meta property="twitter:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia29/img/psyduck3.jpg">
+    <meta property="twitter:description" content="Solución del reto del Día 29 del HTML-30-day-challenge de ManzDev por Murquisdev. Crea un sistema de pestañas (tabs) para mostrar información. Necesita algo de Javascript.">
+    <!-- FIN Etiquetas de Twitter (X) -->
+    <script src="./js/prism.js" defer></script>
+    <script src="./js/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Día 29 - Murquisdev</h1>
+        <h2>Crea un sistema de pestañas (tabs) para mostrar información. Necesita algo de Javascript.</h2>
+    </header>
+    <main>
+        <p>Hay 3 formas posibles de ocultar un elemento con CSS, cada una con sus características:</p>
+        <ul>
+            <li><span class="ubuntu-bold">display: none</span></li>
+            <li><span class="ubuntu-bold">visibility: hidden</span></li>
+            <li><span class="ubuntu-bold">opacity: 0</span></li>
+        </ul>
+    <p>Pero en HTML también disponemos del atributo <span class="ubuntu-bold">hidden</span>, que nos permite hacer una ocultación semántica, que al final lo que hace es que los navegadores ponen en su CSS por defecto la propiedad <span class="ubuntu-regular-italic">display:none</span></p>
+    <p>Con un poco de JS se puede crear el botón o acción que añada o quite el atributo hidden al elemento html</p>
+    <div class="wrapper">
+        <div class="tabSystem">
+            <ul>
+                <li class="active">Pestaña 1</li>
+                <li>Pestaña 2</li>
+                <li>Pestaña 3</li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>Mostrando contenido de la pestaña 1</p>
+        </div>
+        <div class="content" hidden>
+            <p>Mostrando contenido de la pestaña 2</p>
+        </div>
+        <div class="content" hidden>
+            <p>Mostrando contenido de la pestaña 3</p>
+        </div>
+    </div>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-html">
+            &lt;div class="wrapper"&gt;
+                &lt;div class="tabSystem"&gt;
+                    &lt;ul&gt;
+                        &lt;li class="active"&gt;Pestaña 1&lt;/li&gt;
+                        &lt;li&gt;Pestaña 2&lt;/li&gt;
+                        &lt;li&gt;Pestaña 3&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="content"&gt;
+                    &lt;p&gt;Mostrando contenido de la pestaña 1&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="content" hidden&gt;
+                    &lt;p&gt;Mostrando contenido de la pestaña 2&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="content" hidden&gt;
+                    &lt;p&gt;Mostrando contenido de la pestaña 3&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <p>Con la clase <span class="ubuntu-regular-italic">active</span> en el <span class="ubuntu-regular-italic">li</span> voy cambiando los estilos para indicar que pestaña está activa</p>
+    <p>Y con Javascript voy añadiendo o quitando el atributo <span class="ubuntu-regular-italic">hidden</span> según corresponda</p>
+    <pre class="ubuntu-mono-regular">
+        <code class="language-js">
+            // Selecciono los elementos a interaccionar
+            const tabSystem = document.querySelectorAll(".tabSystem li")
+            const content = document.querySelectorAll(".content")
+            
+            //Añado los eventos
+            for(let i= 0; i &lt; tabSystem.length; i++){
+                tabSystem[i].addEventListener("click", () => active(tabSystem[i], i))
+            }
+            
+            // Funciones
+            function hidden(){
+                for(let i=0; i &lt; tabSystem.length; i++){
+                    if(tabSystem[i].classList.contains("active")){
+                        tabSystem[i].classList.remove("active")
+                        content[i].setAttribute("hidden", "")
+                    }
+                }
+            }
+            function active (element, iterator) { //Función que se ejecutará al hacer click en una pestaña
+                hidden()
+                if(!element.classList.contains("active")){
+                    element.classList.add("active")
+                    content[iterator].removeAttribute("hidden")
+                }   
+            }
+        </code>
+    </pre>
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/interactivas/atributo-hidden/">Pista de Manz</a>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>
