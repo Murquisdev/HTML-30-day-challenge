@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 30</title>
+    <meta name="description" content="Solución del reto del Día 30 del HTML-30-day-challenge de ManzDev por Murquisdev. Carga una librería Javascript de confetti y lánzalo cuando pulses en un botón. Requiere algo de Javascript.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Etiquetas de Facebook (Meta) -->
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Solución del reto del Día 30 del HTML-30-day-challenge de ManzDev por Murquisdev">
+        <meta property="og:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia30/index.html">
+        <meta property="og:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia30/img/psyduck3.jpg">
+        <meta property="og:description" content="Solución del reto del Día 30 del HTML-30-day-challenge de ManzDev por Murquisdev. Carga una librería Javascript de confetti y lánzalo cuando pulses en un botón. Requiere algo de Javascript.">
+    <!-- FIN Etiquetas de Facebook (Meta) -->
+    <!-- Etiquetas de Twitter (X) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:creator" content="@murquisdev">
+    <meta property="twitter:title" content="Solución del reto del Día 30 del HTML-30-day-challenge de ManzDev por Murquisdev">
+    <meta property="twitter:url" content="https://murquisdev.github.io/HTML-30-day-challenge/dia30/index.html">
+    <meta property="twitter:image" content="https://murquisdev.github.io/HTML-30-day-challenge/dia30/img/psyduck3.jpg">
+    <meta property="twitter:description" content="Solución del reto del Día 30 del HTML-30-day-challenge de ManzDev por Murquisdev. Carga una librería Javascript de confetti y lánzalo cuando pulses en un botón. Requiere algo de Javascript.">
+    <!-- FIN Etiquetas de Twitter (X) -->
+    <script src="./js/prism.js" defer></script>
+    <script src="./js/index.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>Día 30 - Murquisdev</h1>
+        <h2>Carga una librería Javascript de confetti y lánzalo cuando pulses en un botón. Requiere algo de Javascript.</h2>
+    </header>
+    <main>
+        <p>En el reto del <a href="../dia14/index.html">día 14</a> ya se vio como cargar un <span class="ubuntu-regular-italic">script</span></p>
+        <p>La librería a utlizar será: <a href="https://www.npmjs.com/package/js-confetti">js-confetti</a></p>
+ 
+            <button>🎉</button>
+        <p>Como puse en funcionamiento la librería:</p>
+        <ol>
+            <li>Copié el código JS de la dirección <a href="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js">https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js</a>.</li>
+            <li>Cree el fichero <span class="ubuntu-regular-italic">js-confetti.js</span> y pegué el código.</li>
+            <li>Hice que la función que hay en <span class="ubuntu-regular-italic">js-confetti.js</span> fuera exportable</li>
+            <li>La importé en index.js</li>
+            <li>Hice el proceso de recuperar el botón, añadir el "escuchador" y crear la función que realiza la acción.</li>
+        </ol>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-js">
+                import {JSConfetti} from "./js-confetti.js" // importo la librería
+
+                // Selecciono el elemento a interaccionar
+                const confettiButton = document.querySelector("button")
+
+                //Añado los eventos
+                confettiButton.addEventListener("click", () =&gt; launchConfetti())
+
+                // Funcion
+                function launchConfetti (){
+                const jsConfetti = new JSConfetti() // Creamos el confetti
+                jsConfetti.addConfetti() //  Lanzamos el confetti
+                }
+            </code>
+        </pre>
+    </main>
+    <br>
+    <footer>
+    <a href="https://lenguajehtml.com/html/scripting/etiqueta-html-script/">Pista de Manz</a>
+    <p>Artículos leídos:</p>
+    <ul>
+        <li><a href="https://lenguajejs.com/javascript/modulos/que-es-esm/">¿Qué son los módulos (ESM)?</a></li>
+        <li><a href="https://lenguajejs.com/javascript/modulos/export/">Exportar módulos</a></li>
+        <li><a href="https://lenguajejs.com/javascript/modulos/import/">Importar módulos</a></li>
+    </ul>
+    <p><a href="https://murquisdev.github.io/HTML-30-day-challenge/">VOLVER</a></p>
+    </footer>
+</body>
+</html>

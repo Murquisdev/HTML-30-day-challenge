@@ -36,79 +36,79 @@
             <li><span class="ubuntu-bold">visibility: hidden</span></li>
             <li><span class="ubuntu-bold">opacity: 0</span></li>
         </ul>
-    <p>Pero en HTML también disponemos del atributo <span class="ubuntu-bold">hidden</span>, que nos permite hacer una ocultación semántica, que al final lo que hace es que los navegadores ponen en su CSS por defecto la propiedad <span class="ubuntu-regular-italic">display:none</span></p>
-    <p>Con un poco de JS se puede crear el botón o acción que añada o quite el atributo hidden al elemento html</p>
-    <div class="wrapper">
-        <div class="tabSystem">
-            <ul>
-                <li class="active">Pestaña 1</li>
-                <li>Pestaña 2</li>
-                <li>Pestaña 3</li>
-            </ul>
+        <p>Pero en HTML también disponemos del atributo <span class="ubuntu-bold">hidden</span>, que nos permite hacer una ocultación semántica, que al final lo que hace es que los navegadores ponen en su CSS por defecto la propiedad <span class="ubuntu-regular-italic">display:none</span></p>
+        <p>Con un poco de JS se puede crear el botón o acción que añada o quite el atributo hidden al elemento html</p>
+        <div class="wrapper">
+            <div class="tabSystem">
+                <ul>
+                    <li class="active">Pestaña 1</li>
+                    <li>Pestaña 2</li>
+                    <li>Pestaña 3</li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>Mostrando contenido de la pestaña 1</p>
+            </div>
+            <div class="content" hidden>
+                <p>Mostrando contenido de la pestaña 2</p>
+            </div>
+            <div class="content" hidden>
+                <p>Mostrando contenido de la pestaña 3</p>
+            </div>
         </div>
-        <div class="content">
-            <p>Mostrando contenido de la pestaña 1</p>
-        </div>
-        <div class="content" hidden>
-            <p>Mostrando contenido de la pestaña 2</p>
-        </div>
-        <div class="content" hidden>
-            <p>Mostrando contenido de la pestaña 3</p>
-        </div>
-    </div>
-    <pre class="ubuntu-mono-regular">
-        <code class="language-html">
-            &lt;div class="wrapper"&gt;
-                &lt;div class="tabSystem"&gt;
-                    &lt;ul&gt;
-                        &lt;li class="active"&gt;Pestaña 1&lt;/li&gt;
-                        &lt;li&gt;Pestaña 2&lt;/li&gt;
-                        &lt;li&gt;Pestaña 3&lt;/li&gt;
-                    &lt;/ul&gt;
+        <pre class="ubuntu-mono-regular">
+            <code class="language-html">
+                &lt;div class="wrapper"&gt;
+                    &lt;div class="tabSystem"&gt;
+                        &lt;ul&gt;
+                            &lt;li class="active"&gt;Pestaña 1&lt;/li&gt;
+                            &lt;li&gt;Pestaña 2&lt;/li&gt;
+                            &lt;li&gt;Pestaña 3&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div class="content"&gt;
+                        &lt;p&gt;Mostrando contenido de la pestaña 1&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="content" hidden&gt;
+                        &lt;p&gt;Mostrando contenido de la pestaña 2&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="content" hidden&gt;
+                        &lt;p&gt;Mostrando contenido de la pestaña 3&lt;/p&gt;
+                    &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;div class="content"&gt;
-                    &lt;p&gt;Mostrando contenido de la pestaña 1&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div class="content" hidden&gt;
-                    &lt;p&gt;Mostrando contenido de la pestaña 2&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div class="content" hidden&gt;
-                    &lt;p&gt;Mostrando contenido de la pestaña 3&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        </code>
-    </pre>
-    <p>Con la clase <span class="ubuntu-regular-italic">active</span> en el <span class="ubuntu-regular-italic">li</span> voy cambiando los estilos para indicar que pestaña está activa</p>
-    <p>Y con Javascript voy añadiendo o quitando el atributo <span class="ubuntu-regular-italic">hidden</span> según corresponda</p>
-    <pre class="ubuntu-mono-regular">
-        <code class="language-js">
-            // Selecciono los elementos a interaccionar
-            const tabSystem = document.querySelectorAll(".tabSystem li")
-            const content = document.querySelectorAll(".content")
-            
-            //Añado los eventos
-            for(let i= 0; i &lt; tabSystem.length; i++){
-                tabSystem[i].addEventListener("click", () => active(tabSystem[i], i))
-            }
-            
-            // Funciones
-            function hidden(){
-                for(let i=0; i &lt; tabSystem.length; i++){
-                    if(tabSystem[i].classList.contains("active")){
-                        tabSystem[i].classList.remove("active")
-                        content[i].setAttribute("hidden", "")
+            </code>
+        </pre>
+        <p>Con la clase <span class="ubuntu-regular-italic">active</span> en el <span class="ubuntu-regular-italic">li</span> voy cambiando los estilos para indicar que pestaña está activa</p>
+        <p>Y con Javascript voy añadiendo o quitando el atributo <span class="ubuntu-regular-italic">hidden</span> según corresponda</p>
+        <pre class="ubuntu-mono-regular">
+            <code class="language-js">
+                // Selecciono los elementos a interaccionar
+                const tabSystem = document.querySelectorAll(".tabSystem li")
+                const content = document.querySelectorAll(".content")
+                
+                //Añado los eventos
+                for(let i= 0; i &lt; tabSystem.length; i++){
+                    tabSystem[i].addEventListener("click", () => active(tabSystem[i], i))
+                }
+                
+                // Funciones
+                function hidden(){
+                    for(let i=0; i &lt; tabSystem.length; i++){
+                        if(tabSystem[i].classList.contains("active")){
+                            tabSystem[i].classList.remove("active")
+                            content[i].setAttribute("hidden", "")
+                        }
                     }
                 }
-            }
-            function active (element, iterator) { //Función que se ejecutará al hacer click en una pestaña
-                hidden()
-                if(!element.classList.contains("active")){
-                    element.classList.add("active")
-                    content[iterator].removeAttribute("hidden")
-                }   
-            }
-        </code>
-    </pre>
+                function active (element, iterator) { //Función que se ejecutará al hacer click en una pestaña
+                    hidden()
+                    if(!element.classList.contains("active")){
+                        element.classList.add("active")
+                        content[iterator].removeAttribute("hidden")
+                    }   
+                }
+            </code>
+        </pre>
     </main>
     <br>
     <footer>
